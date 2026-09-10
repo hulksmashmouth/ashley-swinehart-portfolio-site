@@ -4,6 +4,7 @@ import Home from './routes/Home'
 import About from './routes/About'
 import Projects from './routes/Projects'
 import Resume from './routes/Resume'
+import Consulting from './routes/Consulting'
 import NotFound from './routes/NotFound'
 
 export const router = createBrowserRouter([
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'projects', element: <Projects /> },
       { path: 'resume', element: <Resume /> },
+      { path: 'consulting', element: <Consulting /> },
       { path: 'about', element: <About /> },
       { path: '*', element: <NotFound /> },
     ],

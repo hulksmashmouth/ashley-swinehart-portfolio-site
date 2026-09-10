@@ -21,6 +21,9 @@ function App() {
           <NavLink to="/resume" className={navClass}>
             Resume
           </NavLink>
+          <NavLink to="/consulting" className={navClass}>
+            Consulting
+          </NavLink>
           <NavLink to="/about" className={navClass}>
             About
           </NavLink>
