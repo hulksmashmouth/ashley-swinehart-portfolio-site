@@ -9,7 +9,7 @@ function Home() {
       <div className={styles.body}>
         <p>
           I&rsquo;m a UX strategist, product thinker, designer, and front-end
-          engineer who has spent 11+ years figuring out how humans and software
+          engineer who has spent 13+ years figuring out how humans and software
           can get along better.
         </p>
         <p>
