@@ -1,33 +1,121 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
 }
 
-.list {
+.intro h1 {
+  margin: 0;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.companyHead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.companyName {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.summary {
+  margin: 8px 0 0;
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+.caseList {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
-.item {
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
+.case {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
 }
 
-.item:last-child {
-  border-bottom: none;
+.caseIndex {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
 }
 
-.name {
-  margin: 0 0 4px;
-  font-size: 1.2rem;
+.caseBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
 }
 
-.description {
+.caseName {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.caseSubtitle {
   margin: 0;
   color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.caseOverview {
+  margin: 12px 0 0;
+  max-width: 65ch;
+}
+
+.highlights {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+  max-width: 65ch;
+}
+
+.highlightTitle {
+  font-weight: 600;
+}
+
+.highlightCaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .case {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
