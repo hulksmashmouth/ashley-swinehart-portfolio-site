@@ -19,28 +19,30 @@ export const dollyPocket = {
     { label: 'Software', value: 'React Native app + Ollama for local inference' },
     { label: 'Enclosure', value: 'Modified vintage Polly Pocket compact' },
   ],
-  // Progress photos: drop files into public/dolly-pocket/ and set `image` to the
-  // path (e.g. "dolly-pocket/donor-shell.webp"). Captions render with or without.
   shots: [
     {
       title: 'The donor shell',
       caption:
         'A vintage Polly Pocket compact, gutted and test-fit with the Pi 5, screen, and speakers seated in the lid.',
+      image: 'dolly-pocket/donor-shell.webp',
     },
     {
       title: 'Parts pile',
       caption:
         'Pi 5 (8GB), Waveshare 3.2" HDMI LCD, Silicon Power 512GB NVMe, Pimoroni NVMe Base, CQRobot speakers, and the soldering station.',
+      image: 'dolly-pocket/parts-pile.webp',
     },
     {
       title: 'Storage',
       caption:
         'Silicon Power P34A60 512GB (PCIe Gen 3 ×4) paired with the Pimoroni NVMe Base for Raspberry Pi 5.',
+      image: 'dolly-pocket/storage.webp',
     },
     {
       title: 'Test fit',
       caption:
         'Screen and speakers mounted in the lid; the lower tray still needs to be cut for controls and power.',
+      image: 'dolly-pocket/test-fit.webp',
     },
   ] as BuildShot[],
 }
