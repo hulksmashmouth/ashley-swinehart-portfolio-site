@@ -31,8 +31,20 @@ function Projects() {
                 <ul className={styles.highlights}>
                   {cs.highlights.map((h) => (
                     <li key={h.title} className={styles.highlight}>
-                      <span className={styles.highlightTitle}>{h.title}</span>
-                      <span className={styles.highlightCaption}>{h.caption}</span>
+                      {h.image && (
+                        <img
+                          className={styles.shot}
+                          src={`/${h.image}`}
+                          alt={`${cs.name} — ${h.title}`}
+                          loading="lazy"
+                        />
+                      )}
+                      <div className={styles.highlightText}>
+                        <span className={styles.highlightTitle}>{h.title}</span>
+                        <span className={styles.highlightCaption}>
+                          {h.caption}
+                        </span>
+                      </div>
                     </li>
                   ))}
                 </ul>
