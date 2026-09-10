@@ -9,7 +9,7 @@ function App() {
     <div className={styles.shell}>
       <header className={styles.header}>
         <NavLink to="/" className={styles.brand}>
-          Ashley Swinehart
+          Ash Swinehart
         </NavLink>
         <nav className={styles.nav}>
           <NavLink to="/" end className={navClass}>
@@ -29,7 +29,7 @@ function App() {
       </main>
 
       <footer className={styles.footer}>
-        <span>© {new Date().getFullYear()} Ashley Swinehart</span>
+        <span>© {new Date().getFullYear()} Ash Swinehart</span>
       </footer>
     </div>
   )

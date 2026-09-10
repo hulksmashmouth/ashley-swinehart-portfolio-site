@@ -3,7 +3,7 @@ import styles from './Home.module.css'
 function Home() {
   return (
     <section className={styles.hero}>
-      <p className={styles.greeting}>Hi, I&rsquo;m Ashley.</p>
+      <p className={styles.greeting}>Hi, I&rsquo;m Ash.</p>
       <h1 className={styles.title}>I make complicated things make sense.</h1>
 
       <div className={styles.body}>
