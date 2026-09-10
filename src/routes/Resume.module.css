@@ -1,0 +1,178 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.name {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.title {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.download {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.download:hover {
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.summary {
+  margin: 0;
+  max-width: 65ch;
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.transition {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.jobRole {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.jobMeta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.jobOrg {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.dot {
+  opacity: 0.5;
+}
+
+.bullets {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 68ch;
+}
+
+.projectDesc {
+  margin: 0;
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.plainList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.degree {
+  display: block;
+  font-weight: 600;
+}
+
+.school {
+  display: block;
+  color: var(--muted);
+}
+
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
