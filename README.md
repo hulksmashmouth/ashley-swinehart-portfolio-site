@@ -1,32 +1,38 @@
-# React + TypeScript + Vite
+# ashleyswinehart.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio site. Vite + React + TypeScript, React Router, CSS Modules.
 
-Currently, two official plugins are available:
+## Develop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # http://localhost:5173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Other scripts:
+
+- `npm run build` – type-check and produce `dist/`
+- `npm run preview` – serve the production build locally
+- `npm run lint` – oxlint
+
+## Structure
+
+```
+src/
+  main.tsx            entry, mounts RouterProvider
+  router.tsx          route table
+  App.tsx             layout (header / <Outlet/> / footer)
+  routes/             one folder-less file + .module.css per page
+```
+
+## Deploy (Render)
+
+The repo ships a multi-stage `Dockerfile` that builds the static site and serves
+it with nginx. `render.yaml` defines a Docker web service, so on Render:
+
+1. New → Web Service → connect this repo.
+2. Render reads `render.yaml` (runtime: docker). No build/start command needed.
+3. Render injects `PORT`; nginx picks it up via `nginx.conf.template`.
+
+`nginx.conf.template` includes an SPA fallback so client-side routes resolve on
+hard refresh.

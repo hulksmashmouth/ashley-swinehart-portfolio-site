@@ -1,0 +1,55 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--fg);
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  color: var(--muted);
+}
+
+.link:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.main {
+  flex: 1;
+  padding: 48px 0;
+}
+
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
