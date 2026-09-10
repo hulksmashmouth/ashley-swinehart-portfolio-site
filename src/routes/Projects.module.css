@@ -1,31 +1,36 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 64px;
 }
 
 .intro h1 {
   margin: 0;
 }
 
-.company {
+.project {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.companyHead {
+.project + .project {
+  padding-top: 64px;
+  border-top: 1px solid var(--border);
+}
+
+.projectHead {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.companyName {
+.projectName {
   margin: 0;
   font-size: 1.6rem;
 }
 
-.role {
+.kicker {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
@@ -33,10 +38,43 @@
   letter-spacing: 0.08em;
 }
 
+.tagline {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+  max-width: 55ch;
+}
+
 .summary {
   margin: 8px 0 0;
-  max-width: 60ch;
+  max-width: 65ch;
   color: var(--muted);
+}
+
+.specs {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 24px;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+}
+
+.specLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.specValue {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .caseList {
@@ -86,9 +124,19 @@
   max-width: 65ch;
 }
 
+.blockTitle {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
 .highlights {
   list-style: none;
-  margin: 28px 0 0;
+  margin: 24px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
