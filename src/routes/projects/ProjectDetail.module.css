@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .back {
@@ -96,13 +96,17 @@
 
 /* Shared: highlight / build-shot list */
 .blockTitle {
-  margin: 8px 0 0;
+  margin: 28px 0 0;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted);
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+}
+
+.head + .blockTitle {
+  margin-top: 8px;
 }
 
 .highlights {
@@ -114,10 +118,10 @@
   gap: 32px;
 }
 
-/* When the list sits directly under the page (Dolly Pocket), the page's
-   flex gap already provides spacing after the "Build progress" heading. */
+/* When a list sits directly under the page (Dolly Pocket, Design System
+   Starter), the page's flex gap already spaces it from its heading. */
 .page > .highlights {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .highlight {
@@ -182,6 +186,38 @@
 .specValue {
   margin: 0;
   font-size: 0.95rem;
+}
+
+.repoLink {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.repoLink:hover {
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
