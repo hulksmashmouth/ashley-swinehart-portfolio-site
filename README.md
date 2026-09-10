@@ -25,14 +25,21 @@ src/
   routes/             one folder-less file + .module.css per page
 ```
 
-## Deploy (Render)
+## Deploy (Render static site)
 
-The repo ships a multi-stage `Dockerfile` that builds the static site and serves
-it with nginx. `render.yaml` defines a Docker web service, so on Render:
+`render.yaml` defines a Render **static site** — no server, no Docker.
 
-1. New → Web Service → connect this repo.
-2. Render reads `render.yaml` (runtime: docker). No build/start command needed.
-3. Render injects `PORT`; nginx picks it up via `nginx.conf.template`.
+1. Render dashboard → **New → Static Site** → connect this repo.
+2. Render reads `render.yaml`: build `npm ci && npm run build`, publish `./dist`.
+3. The `routes` rewrite (`/* → /index.html`) is the SPA fallback so client-side
+   routes survive a hard refresh. Real files (`/assets/*`) are served first.
 
-`nginx.conf.template` includes an SPA fallback so client-side routes resolve on
-hard refresh.
+### Custom domain (ashleyswinehart.com)
+
+In the site's **Settings → Custom Domains**, add both `ashleyswinehart.com` and
+`www.ashleyswinehart.com`. Render issues TLS automatically. Then at the DNS host:
+
+- `www` → CNAME → `<site>.onrender.com`
+- apex (`ashleyswinehart.com`) → ALIAS/ANAME → `<site>.onrender.com` if the host
+  supports it; otherwise move DNS to Cloudflare (free) so the apex CNAME
+  flattens, or use Render's apex A records (shown in the dashboard).
