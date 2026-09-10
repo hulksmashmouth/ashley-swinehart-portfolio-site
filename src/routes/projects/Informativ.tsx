@@ -1,0 +1,55 @@
+import { Link } from 'react-router-dom'
+import { informativ } from '../../data/informativ'
+import styles from './ProjectDetail.module.css'
+
+function Informativ() {
+  return (
+    <div className={styles.page}>
+      <Link to="/projects" className={styles.back}>
+        ← All projects
+      </Link>
+
+      <div className={styles.head}>
+        <h1 className={styles.name}>{informativ.company}</h1>
+        <p className={styles.kicker}>{informativ.role}</p>
+        <p className={styles.summary}>{informativ.summary}</p>
+      </div>
+
+      <ol className={styles.caseList}>
+        {informativ.caseStudies.map((cs, i) => (
+          <li key={cs.slug} className={styles.case}>
+            <div className={styles.caseIndex}>
+              {String(i + 1).padStart(2, '0')}
+            </div>
+            <div className={styles.caseBody}>
+              <h2 className={styles.caseName}>{cs.name}</h2>
+              <p className={styles.caseSubtitle}>{cs.subtitle}</p>
+              <p className={styles.caseOverview}>{cs.overview}</p>
+
+              <ul className={styles.highlights}>
+                {cs.highlights.map((h) => (
+                  <li key={h.title} className={styles.highlight}>
+                    {h.image && (
+                      <img
+                        className={styles.shot}
+                        src={`/${h.image}`}
+                        alt={`${cs.name} — ${h.title}`}
+                        loading="lazy"
+                      />
+                    )}
+                    <div className={styles.highlightText}>
+                      <span className={styles.highlightTitle}>{h.title}</span>
+                      <span className={styles.highlightCaption}>{h.caption}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+export default Informativ

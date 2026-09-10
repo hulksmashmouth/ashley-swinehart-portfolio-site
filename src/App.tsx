@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, ScrollRestoration } from 'react-router-dom'
 import styles from './App.module.css'
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -37,6 +37,8 @@ function App() {
       <footer className={styles.footer}>
         <span>© {new Date().getFullYear()} Ash Swinehart</span>
       </footer>
+
+      <ScrollRestoration />
     </div>
   )
 }
