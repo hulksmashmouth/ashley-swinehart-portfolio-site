@@ -9,6 +9,10 @@
   font-size: clamp(1.6rem, 4vw, 2.25rem);
   line-height: 1.25;
   max-width: 20ch;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .subhead {
@@ -28,7 +32,12 @@
   margin: 0;
 }
 
+.body em {
+  color: var(--blue);
+  font-style: italic;
+}
+
 .closer strong {
-  color: var(--fg);
+  color: var(--magenta);
   font-size: 1.15rem;
 }

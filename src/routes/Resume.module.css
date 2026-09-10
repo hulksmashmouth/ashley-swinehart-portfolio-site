@@ -25,17 +25,19 @@
 
 .download {
   flex-shrink: 0;
-  padding: 8px 16px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #0a0812;
+  background: var(--gradient);
+  box-shadow: var(--glow);
+  transition: filter 0.15s ease;
 }
 
 .download:hover {
-  text-decoration: none;
-  background: var(--accent);
-  color: var(--bg);
+  color: #0a0812;
+  filter: brightness(1.1);
 }
 
 .summary {
@@ -53,6 +55,14 @@
   font-size: 0.95rem;
 }
 
+.links a {
+  color: var(--blue);
+}
+
+.links a:hover {
+  color: var(--magenta);
+}
+
 .section {
   display: flex;
   flex-direction: column;
@@ -64,9 +74,10 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--fg);
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid transparent;
+  border-image: var(--gradient) 1;
 }
 
 .jobs {
@@ -84,10 +95,13 @@
 .transition {
   margin: 0 0 8px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--accent);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .jobRole {
@@ -120,6 +134,10 @@
   flex-direction: column;
   gap: 6px;
   max-width: 68ch;
+}
+
+.bullets li::marker {
+  color: var(--purple);
 }
 
 .projectDesc {
@@ -164,10 +182,11 @@
 }
 
 .skill {
-  padding: 4px 12px;
-  border: 1px solid var(--border);
+  padding: 5px 13px;
   border-radius: 999px;
   font-size: 0.9rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
 @media (max-width: 600px) {

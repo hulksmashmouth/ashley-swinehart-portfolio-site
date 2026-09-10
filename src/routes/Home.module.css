@@ -7,7 +7,7 @@
 .intro {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 .photo {
@@ -15,8 +15,11 @@
   width: 200px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    var(--glow),
+    0 0 0 1px rgba(255, 77, 157, 0.12);
 }
 
 .heading {
@@ -28,7 +31,11 @@
 .greeting {
   margin: 0;
   font-size: 1.1rem;
-  color: var(--muted);
+  font-weight: 600;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .title {
@@ -50,7 +57,8 @@
 }
 
 .body strong {
-  color: var(--fg);
+  color: var(--magenta);
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {

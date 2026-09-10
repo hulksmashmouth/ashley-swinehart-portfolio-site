@@ -11,8 +11,7 @@
 }
 
 .back:hover {
-  color: var(--fg);
-  text-decoration: none;
+  color: var(--magenta);
 }
 
 .head {
@@ -28,10 +27,14 @@
 
 .kicker {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .tagline {
@@ -66,9 +69,12 @@
 
 .caseIndex {
   font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .caseBody {
@@ -100,9 +106,10 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--fg);
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid transparent;
+  border-image: var(--gradient) 1;
 }
 
 .head + .blockTitle {
@@ -118,8 +125,6 @@
   gap: 32px;
 }
 
-/* When a list sits directly under the page (Dolly Pocket, Design System
-   Starter), the page's flex gap already spaces it from its heading. */
 .page > .highlights {
   margin-top: 0;
 }
@@ -136,7 +141,8 @@
   flex-direction: column;
   gap: 2px;
   padding-left: 14px;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid transparent;
+  border-image: var(--gradient) 1;
   max-width: 60ch;
 }
 
@@ -146,9 +152,9 @@
   max-width: 100%;
   max-height: 560px;
   height: auto;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: 0 6px 24px rgb(0 0 0 / 0.08);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 44px -16px rgba(61, 125, 255, 0.4);
 }
 
 .highlightTitle {
@@ -160,27 +166,32 @@
   font-size: 0.95rem;
 }
 
-/* Dolly Pocket spec grid */
+/* spec grid — glass chips */
 .specs {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px 24px;
+  gap: 14px;
 }
 
 .spec {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding-left: 14px;
-  border-left: 2px solid var(--border);
+  gap: 3px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
 }
 
 .specLabel {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--purple);
+  font-weight: 700;
 }
 
 .specValue {
@@ -191,17 +202,19 @@
 .repoLink {
   align-self: flex-start;
   margin-top: 8px;
-  padding: 8px 16px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #0a0812;
+  background: var(--gradient);
+  box-shadow: var(--glow);
+  transition: filter 0.15s ease;
 }
 
 .repoLink:hover {
-  text-decoration: none;
-  background: var(--accent);
-  color: var(--bg);
+  color: #0a0812;
+  filter: brightness(1.1);
 }
 
 .tags {
@@ -214,10 +227,11 @@
 }
 
 .tag {
-  padding: 4px 12px;
-  border: 1px solid var(--border);
+  padding: 5px 13px;
   border-radius: 999px;
   font-size: 0.9rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
 @media (max-width: 600px) {
