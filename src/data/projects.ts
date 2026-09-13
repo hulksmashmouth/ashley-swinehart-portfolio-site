@@ -13,7 +13,7 @@ export const projectIndex: ProjectCard[] = [
     kicker: 'Product & UX Design',
     blurb:
       'Unifying multiple auto-fintech products into one cohesive platform — the marketing site, a mobile AI assistant, the desking tool, and the core credit compliance app.',
-    meta: '4 case studies',
+    meta: '4 case studies · 🔒 Password protected',
   },
   {
     slug: 'dolly-pocket',
