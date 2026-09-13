@@ -13,13 +13,21 @@ export const dollyPocket = {
     'A fully offline AI assistant with Dolly Parton’s voice, built into a vintage Polly Pocket',
   status: 'In progress — targeted for October 2026',
   overview:
-    'Dolly Pocket is a self-contained AI assistant that runs entirely on-device. A React Native app talks to a local Ollama model, so there are no API keys and nothing leaves the hardware. The assistant answers in Dolly Parton’s speaking style, wrapped in a UI themed to match. The whole thing is a cyberdeck packed into a vintage Polly Pocket compact — a Raspberry Pi 5, a small HDMI touchscreen, stereo speakers, and NVMe storage inside the clamshell.',
+    'Dolly Pocket is a self-contained AI assistant that runs entirely on-device. A React Native app talks to a local Ollama model, so there are no API keys and nothing leaves the hardware. The assistant answers in Dolly Parton’s speaking style, wrapped in a UI themed to match. The whole thing is a cyberdeck packed into a vintage Polly Pocket compact — a Raspberry Pi 5, a small HDMI display, stereo speakers, and NVMe storage inside the clamshell.',
   specs: [
     { label: 'Compute', value: 'Raspberry Pi 5, 8GB RAM' },
     { label: 'Storage', value: '512GB NVMe SSD on a Pimoroni NVMe Base' },
     { label: 'Display', value: 'Waveshare 3.2" HDMI LCD, 480×800' },
     { label: 'Audio', value: 'Dual 3W 8Ω speakers' },
-    { label: 'Software', value: 'React Native app + Ollama for local inference' },
+    { label: 'App', value: 'Expo (React Native) chat client, exported to a static web build' },
+    { label: 'Inference', value: 'Ollama, running a model sized for 8GB RAM (llama3.2:3b)' },
+    {
+      label: 'Memory',
+      value: 'Optional RAG over an imported ChatGPT export, embedded locally with nomic-embed-text',
+    },
+    { label: 'Voice output', value: 'Local text-to-speech via Piper (en_US-amy-medium voice)' },
+    { label: 'Kiosk', value: 'Boots straight into fullscreen Chromium via cage + seatd' },
+    { label: 'Services', value: 'systemd units for the web, RAG, TTS, and kiosk processes' },
     { label: 'Enclosure', value: 'Modified vintage Polly Pocket compact' },
   ],
   shots: [
