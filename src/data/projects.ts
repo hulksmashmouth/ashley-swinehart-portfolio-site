@@ -21,7 +21,7 @@ export const projectIndex: ProjectCard[] = [
     kicker: 'Personal build',
     blurb:
       'A fully offline AI assistant with Dolly Parton’s voice and a themed UI, built into a cyberdeck inside a vintage Polly Pocket.',
-    meta: 'In progress — Nov 2026',
+    meta: 'In progress — Oct 2026',
   },
   {
     slug: 'design-system-starter',

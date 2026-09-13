@@ -34,7 +34,10 @@ function DollyPocket() {
                 className={styles.shot}
                 src={`/${shot.image}`}
                 alt={`${dollyPocket.name} — ${shot.title}`}
+                width={shot.width}
+                height={shot.height}
                 loading="lazy"
+                decoding="async"
               />
             )}
             <div className={styles.highlightText}>

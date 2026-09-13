@@ -3,6 +3,9 @@ export type CaseStudyHighlight = {
   caption: string
   /** Path under /public, e.g. "informativ/marketing-1.webp" */
   image?: string
+  /** Intrinsic pixel size of `image`, so the browser can reserve space before it loads. */
+  width?: number
+  height?: number
 }
 
 export type CaseStudy = {
@@ -31,42 +34,56 @@ export const informativ = {
           caption:
             'The line I wanted every visitor to read first: one platform for credit, fraud prevention, compliance, and smarter deals.',
           image: 'informativ/marketing-1.webp',
+          width: 1276,
+          height: 743,
         },
         {
           title: 'The product grid',
           caption:
             'Six products explained in plain language instead of jargon, grouped by what a dealer is trying to get done.',
           image: 'informativ/marketing-2.webp',
+          width: 1276,
+          height: 702,
         },
         {
           title: 'By the numbers',
           caption:
             'Proof before pitch: dealership count, fraud dollars prevented, and uptime, right where a skeptical visitor looks for it.',
           image: 'informativ/marketing-3.webp',
+          width: 1276,
+          height: 743,
         },
         {
           title: 'Company updates',
           caption:
             'Insight cards that keep the site feeling current instead of like a brochure nobody has touched in a year.',
           image: 'informativ/marketing-4.webp',
+          width: 1276,
+          height: 700,
         },
         {
           title: 'Product landing pages',
           caption:
             'Each product got its own landing page and its own voice, while staying visually part of the same family.',
           image: 'informativ/marketing-5.webp',
+          width: 1276,
+          height: 744,
         },
         {
           title: 'The value section',
           caption:
             '“Turn every shopper into a qualified opportunity,” the plain-English case for why a product matters.',
           image: 'informativ/marketing-6.webp',
+          width: 1276,
+          height: 690,
         },
         {
           title: 'The footer',
           caption:
             'Every link a visitor could want, and one last, low-pressure chance to book a demo.',
           image: 'informativ/marketing-7.webp',
+          width: 1276,
+          height: 749,
         },
       ],
     },
@@ -82,18 +99,24 @@ export const informativ = {
           caption:
             'Ivy needed a home inside a screen people already trust with sensitive information.',
           image: 'informativ/ivy-1.webp',
+          width: 637,
+          height: 1143,
         },
         {
           title: 'Meet Ivy',
           caption:
             'The assistant opens with the three questions people actually ask most, instead of a blank chat box.',
           image: 'informativ/ivy-2.webp',
+          width: 639,
+          height: 1142,
         },
         {
           title: 'Chat history',
           caption:
             'Past conversations, saved and searchable, so nobody has to explain the same problem twice.',
           image: 'informativ/ivy-3.webp',
+          width: 642,
+          height: 1143,
         },
       ],
     },
@@ -109,18 +132,24 @@ export const informativ = {
           caption:
             'Both options laid out side by side, with the stronger payment flagged automatically.',
           image: 'informativ/smartpencil-1.webp',
+          width: 1276,
+          height: 741,
         },
         {
           title: 'The fee breakdown',
           caption:
             'Tax, title, license, and dealer fees, spelled out in full instead of buried in a tooltip.',
           image: 'informativ/smartpencil-2.webp',
+          width: 1276,
+          height: 749,
         },
         {
           title: 'Custom incentives',
           caption:
             'Adding a one-off incentive without ever losing sight of the running total.',
           image: 'informativ/smartpencil-3.webp',
+          width: 1276,
+          height: 751,
         },
       ],
     },
@@ -136,46 +165,62 @@ export const informativ = {
           caption:
             'Active deals, what needs attention, and how far along the pipeline is, all at a glance.',
           image: 'informativ/ccp-1.webp',
+          width: 1276,
+          height: 736,
         },
         {
           title: 'STIPs status',
           caption:
             'Every open request across the dealership, sorted by what is still missing.',
           image: 'informativ/ccp-2.webp',
+          width: 1276,
+          height: 741,
         },
         {
           title: 'Requesting STIPs by text',
           caption:
             'A secure link plus a PIN the customer can read back over the phone.',
           image: 'informativ/ccp-3.webp',
+          width: 1276,
+          height: 744,
         },
         {
           title: 'The same request by email',
           caption: 'Same links, same tracking, just a different inbox.',
           image: 'informativ/ccp-4.webp',
+          width: 1276,
+          height: 744,
         },
         {
           title: 'Digital Showroom',
           caption:
             'Starting a deal from the floor with the right paperwork already queued up.',
           image: 'informativ/ccp-5.webp',
+          width: 1276,
+          height: 744,
         },
         {
           title: 'Compliance and disclosures',
           caption: 'The checklist required before credit ever gets pulled.',
           image: 'informativ/ccp-6.webp',
+          width: 1276,
+          height: 743,
         },
         {
           title: 'Ask Ivy, compliance edition',
           caption:
             'Sitting right on top of the workflow instead of living in a separate tab somewhere.',
           image: 'informativ/ccp-7.webp',
+          width: 1276,
+          height: 743,
         },
         {
           title: 'Ask Ivy in action',
           caption:
             'A credit report comes back with an OFAC hit, and Ivy walks through what happens next.',
           image: 'informativ/ccp-8.webp',
+          width: 1276,
+          height: 743,
         },
       ],
     },

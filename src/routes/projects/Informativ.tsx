@@ -34,7 +34,10 @@ function Informativ() {
                         className={styles.shot}
                         src={`/${h.image}`}
                         alt={`${cs.name} — ${h.title}`}
+                        width={h.width}
+                        height={h.height}
                         loading="lazy"
+                        decoding="async"
                       />
                     )}
                     <div className={styles.highlightText}>
