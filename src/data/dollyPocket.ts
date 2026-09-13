@@ -44,5 +44,35 @@ export const dollyPocket = {
         'Screen and speakers mounted in the lid; the lower tray still needs to be cut for controls and power.',
       image: 'dolly-pocket/test-fit.webp',
     },
+    {
+      title: 'Measuring the shell',
+      caption:
+        'The donor compact opened up and measured out before any cutting, to see how much depth there was to work with.',
+      image: 'dolly-pocket/shell-measuring.webp',
+    },
+    {
+      title: 'The Pi 5',
+      caption:
+        'Raspberry Pi 5 (8GB) with its active cooler fan and heatsink attached — the brains of the build.',
+      image: 'dolly-pocket/pi5-heatsink.webp',
+    },
+    {
+      title: 'NVMe base',
+      caption:
+        'The Pimoroni NVMe Base for Raspberry Pi 5, which carries the 512GB SSD and stacks onto the Pi.',
+      image: 'dolly-pocket/nvme-base.webp',
+    },
+    {
+      title: 'The screen',
+      caption:
+        'The Waveshare 3.2" HDMI LCD, measured against the shell to plan out the cutout in the lid.',
+      image: 'dolly-pocket/waveshare-screen.webp',
+    },
+    {
+      title: 'Screen connector edge',
+      caption:
+        'A closer look at the HDMI and USB-C connectors on the edge of the screen board, checking clearance inside the shell.',
+      image: 'dolly-pocket/screen-connector-edge.webp',
+    },
   ] as BuildShot[],
 }
