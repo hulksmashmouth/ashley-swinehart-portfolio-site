@@ -6,13 +6,13 @@
 
 .intro {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 32px;
 }
 
 .photo {
   flex-shrink: 0;
-  width: 200px;
+  width: 240px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 16px;
@@ -26,6 +26,51 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
+  padding-top: 6px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ctaPrimary {
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--gradient);
+  box-shadow: var(--glow);
+  transition: filter 0.15s ease;
+}
+
+.ctaPrimary:hover {
+  color: var(--bg);
+  filter: brightness(1.1);
+}
+
+.ctaSecondary {
+  padding: 10px 21px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.ctaSecondary:hover {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 .greeting {

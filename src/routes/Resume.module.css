@@ -80,21 +80,60 @@
   border-image: var(--gradient) 1;
 }
 
+.experienceHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.experienceHint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .jobs {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 10px;
 }
 
 .job {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.job[open] {
+  background: var(--glass-bg-strong);
+}
+
+.jobSummary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.jobSummary::-webkit-details-marker {
+  display: none;
+}
+
+.jobHeading {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .transition {
-  margin: 0 0 8px;
-  font-size: 0.8rem;
+  margin: 0 0 2px;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -106,7 +145,7 @@
 
 .jobRole {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .jobMeta {
@@ -115,7 +154,7 @@
   flex-wrap: wrap;
   gap: 6px;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .jobOrg {
@@ -127,13 +166,43 @@
   opacity: 0.5;
 }
 
+.jobChevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  transition: transform 0.18s ease;
+}
+
+.jobChevron::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.job[open] .jobChevron {
+  transform: rotate(180deg);
+}
+
 .bullets {
-  margin: 8px 0 0;
-  padding-left: 20px;
+  margin: 10px 0 0;
+  padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   max-width: 68ch;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .bullets li::marker {

@@ -8,11 +8,13 @@ function About() {
         work better.
       </h1>
 
+      <p className={styles.opener}>
+        I&rsquo;m Ashley, a UX strategist, designer, and front-end engineer
+        based in Northeast Ohio.
+      </p>
+
+      <h2 className={styles.subhead}>From art to engineering</h2>
       <div className={styles.body}>
-        <p>
-          I&rsquo;m Ashley, a UX strategist, designer, and front-end engineer
-          based in Northeast Ohio.
-        </p>
         <p>
           My path into UX wasn&rsquo;t exactly linear. I started in art, earning
           a BFA in Studio Art before eventually finding my way into technology. I
@@ -20,7 +22,11 @@ function About() {
           other people designed and discovering that I had a lot of opinions
           about <em>why</em> we were building them that way in the first place.
         </p>
-        <p>That curiosity pulled me deeper into UX.</p>
+      </div>
+      <p className={styles.pullQuote}>That curiosity pulled me deeper into UX.</p>
+
+      <h2 className={styles.subhead}>From building to shaping</h2>
+      <div className={styles.body}>
         <p>
           I earned my master&rsquo;s in UX Design and gradually moved from
           implementing experiences to shaping them: working across UX
@@ -36,12 +42,12 @@ function About() {
           finished, and I don&rsquo;t think technical constraints should only
           enter the conversation after someone hits &ldquo;handoff.&rdquo;
         </p>
-        <p>
-          I want to know what we&rsquo;re solving, who we&rsquo;re solving it for,
-          why it matters, how it behaves, and whether we can actually build the
-          damn thing.
-        </p>
       </div>
+      <p className={styles.pullQuote}>
+        I want to know what we&rsquo;re solving, who we&rsquo;re solving it for,
+        why it matters, how it behaves, and whether we can actually build the
+        damn thing.
+      </p>
 
       <div className={styles.snapshots}>
         <figure className={`${styles.snapshot} ${styles.snapshotWide}`}>
@@ -84,7 +90,6 @@ function About() {
       <h2 className={styles.subhead}>
         I&rsquo;m also a person who likes making things.
       </h2>
-
       <div className={styles.body}>
         <p>That part has never really changed.</p>
         <p>
@@ -93,6 +98,10 @@ function About() {
           decide the obvious next step is putting a tiny computer inside a Polly
           Pocket.
         </p>
+      </div>
+
+      <h2 className={styles.subhead}>Art, old tech, and a proper &rsquo;70s den</h2>
+      <div className={styles.body}>
         <p>
           I love art, old technology, weird technology, mid-century and
           &rsquo;70s design, vintage shopping, live music, and projects that give
@@ -101,33 +110,33 @@ function About() {
           having access to every movie ever made wasn&rsquo;t inconvenient
           enough.
         </p>
+      </div>
 
-        <figure className={styles.den}>
-          <img
-            src="/about/seventies-den.webp"
-            alt="A wood-paneled 70s den with a VHS setup, a shag rug, vintage armchairs, and a black cat perched on the TV"
-            width={1400}
-            height={1050}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption className={styles.denCaption}>
-            The den in question — VHS setup, shag rug, resident cat included.
-          </figcaption>
-        </figure>
+      <figure className={styles.den}>
+        <img
+          src="/about/seventies-den.webp"
+          alt="A wood-paneled 70s den with a VHS setup, a shag rug, vintage armchairs, and a black cat perched on the TV"
+          width={1400}
+          height={1050}
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption className={styles.denCaption}>
+          The den in question — VHS setup, shag rug, resident cat included.
+        </figcaption>
+      </figure>
 
+      <div className={styles.body}>
         <p>
           That mix of art, technology, curiosity, and mild refusal to leave well
           enough alone is probably the throughline of my career.
         </p>
         <p>I don&rsquo;t just want to make software prettier.</p>
-        <p className={styles.closer}>
-          <strong>
-            I want to understand it, question it, take it apart, and put it back
-            together better.
-          </strong>
-        </p>
       </div>
+      <p className={styles.closer}>
+        I want to understand it, question it, take it apart, and put it back
+        together better.
+      </p>
     </article>
   )
 }

@@ -13,10 +13,32 @@ function Projects() {
         {projectIndex.map((p) => (
           <li key={p.slug}>
             <Link to={`/projects/${p.slug}`} className={styles.card}>
-              <p className={styles.kicker}>{p.kicker}</p>
-              <h2 className={styles.name}>{p.name}</h2>
-              <p className={styles.blurb}>{p.blurb}</p>
-              <span className={styles.meta}>{p.meta}</span>
+              {p.image && (
+                <img
+                  className={styles.thumb}
+                  src={`/${p.image}`}
+                  alt=""
+                  width={p.imageWidth}
+                  height={p.imageHeight}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <div className={styles.cardBody}>
+                <p className={styles.kicker}>{p.kicker}</p>
+                <h2 className={styles.name}>{p.name}</h2>
+                <p className={styles.blurb}>{p.blurb}</p>
+                {p.tags && (
+                  <ul className={styles.tags}>
+                    {p.tags.map((t) => (
+                      <li key={t} className={styles.tag}>
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <span className={styles.meta}>{p.meta}</span>
+              </div>
             </Link>
           </li>
         ))}

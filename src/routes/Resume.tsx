@@ -27,33 +27,47 @@ function Resume() {
       </ul>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Experience</h2>
+        <div className={styles.experienceHead}>
+          <h2 className={styles.sectionTitle}>Experience</h2>
+          <p className={styles.experienceHint}>
+            Most recent two roles are expanded — tap any role to expand it.
+          </p>
+        </div>
         <div className={styles.jobs}>
-          {resume.experience.map((job) => (
-            <article key={`${job.org}-${job.role}`} className={styles.job}>
-              {job.transitionNote && (
-                <p className={styles.transition}>{job.transitionNote}</p>
-              )}
-              <h3 className={styles.jobRole}>{job.role}</h3>
-              <p className={styles.jobMeta}>
-                <span className={styles.jobOrg}>{job.org}</span>
-                <span className={styles.dot}>·</span>
-                <span>
-                  {job.start} – {job.end}
-                </span>
-                {job.location && (
-                  <>
+          {resume.experience.map((job, i) => (
+            <details
+              key={`${job.org}-${job.role}`}
+              className={styles.job}
+              open={i < 2}
+            >
+              <summary className={styles.jobSummary}>
+                <span className={styles.jobHeading}>
+                  {job.transitionNote && (
+                    <p className={styles.transition}>{job.transitionNote}</p>
+                  )}
+                  <h3 className={styles.jobRole}>{job.role}</h3>
+                  <p className={styles.jobMeta}>
+                    <span className={styles.jobOrg}>{job.org}</span>
                     <span className={styles.dot}>·</span>
-                    <span>{job.location}</span>
-                  </>
-                )}
-              </p>
+                    <span>
+                      {job.start} – {job.end}
+                    </span>
+                    {job.location && (
+                      <>
+                        <span className={styles.dot}>·</span>
+                        <span>{job.location}</span>
+                      </>
+                    )}
+                  </p>
+                </span>
+                <span className={styles.jobChevron} aria-hidden="true" />
+              </summary>
               <ul className={styles.bullets}>
                 {job.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
               </ul>
-            </article>
+            </details>
           ))}
         </div>
       </section>

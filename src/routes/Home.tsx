@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { resume } from '../data/resume'
 import styles from './Home.module.css'
 
 function Home() {
@@ -14,6 +16,22 @@ function Home() {
         <div className={styles.heading}>
           <p className={styles.greeting}>Hi, I&rsquo;m Ash.</p>
           <h1 className={styles.title}>I make complicated things make sense.</h1>
+
+          <div className={styles.ctas}>
+            <Link to="/projects" className={styles.ctaPrimary}>
+              View my work
+            </Link>
+            <Link to="/consulting" className={styles.ctaSecondary}>
+              Get in touch
+            </Link>
+            <a
+              className={styles.ctaSecondary}
+              href={`/${resume.pdf}`}
+              download
+            >
+              Download résumé
+            </a>
+          </div>
         </div>
       </div>
 

@@ -13,11 +13,6 @@
   position: sticky;
   top: 14px;
   z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
   margin-top: 18px;
   padding: 14px 20px;
   border-radius: 16px;
@@ -28,6 +23,13 @@
   box-shadow:
     0 1px 0 var(--glass-highlight) inset,
     0 12px 40px -16px rgba(0, 0, 0, 0.7);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .brand {
@@ -83,13 +85,115 @@
   font-size: 0.9rem;
 }
 
+/* mobile menu toggle — hidden on desktop, where the nav is always visible inline */
+.menuToggle {
+  display: none;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuToggleBars,
+.menuToggleBars::before,
+.menuToggleBars::after {
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--fg);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.menuToggleBars {
+  position: relative;
+}
+
+.menuToggleBars::before,
+.menuToggleBars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menuToggleBars::before {
+  top: -5px;
+}
+
+.menuToggleBars::after {
+  top: 5px;
+}
+
+.menuToggleBars[data-open="true"] {
+  background: transparent;
+}
+
+.menuToggleBars[data-open="true"]::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menuToggleBars[data-open="true"]::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 640px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+  .menuToggle {
+    display: flex;
   }
 
+  /* an intentional dropdown panel, not a wrapped second row of links */
   .nav {
-    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition:
+      max-height 0.22s ease,
+      opacity 0.18s ease,
+      margin-top 0.22s ease;
+  }
+
+  .nav[data-open="true"] {
+    max-height: 320px;
+    opacity: 1;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+
+  .link {
+    padding: 9px 4px;
+    font-size: 1rem;
+  }
+
+  .active::after {
+    top: 0;
+    left: -8px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    border-radius: 2px;
   }
 }
