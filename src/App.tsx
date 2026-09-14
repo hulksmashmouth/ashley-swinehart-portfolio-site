@@ -18,6 +18,9 @@ function App() {
           <NavLink to="/projects" className={navClass}>
             Projects
           </NavLink>
+          <NavLink to="/photography" className={navClass}>
+            Photography
+          </NavLink>
           <NavLink to="/resume" className={navClass}>
             Resume
           </NavLink>

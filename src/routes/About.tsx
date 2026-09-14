@@ -43,6 +43,42 @@ function About() {
         </p>
       </div>
 
+      <div className={styles.snapshots}>
+        <figure className={styles.snapshot}>
+          <img
+            src="/about/home-office.webp"
+            alt="Ash at her home office desk, in front of a dual-monitor coding setup"
+            width={1400}
+            height={1050}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className={styles.snapshotCaption}>Office</figcaption>
+        </figure>
+        <figure className={styles.snapshot}>
+          <img
+            src="/about/kitchen.webp"
+            alt="Ash in her kitchen, with a wall of hanging copper pots behind her"
+            width={1050}
+            height={1400}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className={styles.snapshotCaption}>Kitchen</figcaption>
+        </figure>
+        <figure className={styles.snapshot}>
+          <img
+            src="/about/on-the-road.webp"
+            alt="Ash sitting on a bench along a tree-lined street while traveling"
+            width={1050}
+            height={1400}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className={styles.snapshotCaption}>Travel</figcaption>
+        </figure>
+      </div>
+
       <h2 className={styles.subhead}>
         I&rsquo;m also a person who likes making things.
       </h2>
@@ -63,6 +99,21 @@ function About() {
           having access to every movie ever made wasn&rsquo;t inconvenient
           enough.
         </p>
+
+        <figure className={styles.den}>
+          <img
+            src="/about/seventies-den.webp"
+            alt="A wood-paneled 70s den with a VHS setup, a shag rug, vintage armchairs, and a black cat perched on the TV"
+            width={1400}
+            height={1050}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className={styles.denCaption}>
+            The den in question — VHS setup, shag rug, resident cat included.
+          </figcaption>
+        </figure>
+
         <p>
           That mix of art, technology, curiosity, and mild refusal to leave well
           enough alone is probably the throughline of my career.

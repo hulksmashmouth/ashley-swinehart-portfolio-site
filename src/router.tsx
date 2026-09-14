@@ -3,6 +3,7 @@ import App from './App'
 import Home from './routes/Home'
 import About from './routes/About'
 import Projects from './routes/Projects'
+import Photography from './routes/Photography'
 import PasswordGate from './components/PasswordGate'
 import DollyPocketProject from './routes/projects/DollyPocket'
 import DesignSystemStarterProject from './routes/projects/DesignSystemStarter'
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'projects', element: <Projects /> },
+      { path: 'photography', element: <Photography /> },
       {
         path: 'projects/informativ',
         element: (
