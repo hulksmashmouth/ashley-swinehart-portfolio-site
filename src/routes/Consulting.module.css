@@ -20,7 +20,7 @@
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #0a0812;
+  color: var(--bg);
   background: var(--gradient);
   box-shadow: var(--glow);
   text-transform: uppercase;
@@ -92,7 +92,7 @@
 }
 
 .engagements li::marker {
-  color: var(--purple);
+  color: var(--wine);
 }
 
 .cta {
@@ -116,11 +116,11 @@
 }
 
 .cta a {
-  color: var(--blue);
+  color: var(--gold);
 }
 
 .cta a:hover {
-  color: var(--magenta);
+  color: var(--crimson);
 }
 
 @media (max-width: 600px) {

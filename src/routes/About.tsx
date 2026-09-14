@@ -44,7 +44,7 @@ function About() {
       </div>
 
       <div className={styles.snapshots}>
-        <figure className={styles.snapshot}>
+        <figure className={`${styles.snapshot} ${styles.snapshotWide}`}>
           <img
             src="/about/home-office.webp"
             alt="Ash at her home office desk, in front of a dual-monitor coding setup"
@@ -55,28 +55,30 @@ function About() {
           />
           <figcaption className={styles.snapshotCaption}>Office</figcaption>
         </figure>
-        <figure className={styles.snapshot}>
-          <img
-            src="/about/kitchen.webp"
-            alt="Ash in her kitchen, with a wall of hanging copper pots behind her"
-            width={1050}
-            height={1400}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption className={styles.snapshotCaption}>Kitchen</figcaption>
-        </figure>
-        <figure className={styles.snapshot}>
-          <img
-            src="/about/on-the-road.webp"
-            alt="Ash sitting on a bench along a tree-lined street while traveling"
-            width={1050}
-            height={1400}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption className={styles.snapshotCaption}>Travel</figcaption>
-        </figure>
+        <div className={styles.snapshotRow}>
+          <figure className={styles.snapshot}>
+            <img
+              src="/about/kitchen.webp"
+              alt="Ash in her kitchen, with a wall of hanging copper pots behind her"
+              width={1050}
+              height={1400}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className={styles.snapshotCaption}>Kitchen</figcaption>
+          </figure>
+          <figure className={styles.snapshot}>
+            <img
+              src="/about/on-the-road.webp"
+              alt="Ash sitting on a bench along a tree-lined street while traveling"
+              width={1050}
+              height={1400}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className={styles.snapshotCaption}>Travel</figcaption>
+          </figure>
+        </div>
       </div>
 
       <h2 className={styles.subhead}>

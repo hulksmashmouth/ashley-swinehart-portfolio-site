@@ -29,14 +29,14 @@
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #0a0812;
+  color: var(--bg);
   background: var(--gradient);
   box-shadow: var(--glow);
   transition: filter 0.15s ease;
 }
 
 .download:hover {
-  color: #0a0812;
+  color: var(--bg);
   filter: brightness(1.1);
 }
 
@@ -56,11 +56,11 @@
 }
 
 .links a {
-  color: var(--blue);
+  color: var(--gold);
 }
 
 .links a:hover {
-  color: var(--magenta);
+  color: var(--crimson);
 }
 
 .section {
@@ -137,7 +137,7 @@
 }
 
 .bullets li::marker {
-  color: var(--purple);
+  color: var(--wine);
 }
 
 .projectDesc {

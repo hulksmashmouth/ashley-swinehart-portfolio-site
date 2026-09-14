@@ -1,28 +1,28 @@
 :root {
   color-scheme: dark;
 
-  /* base */
-  --bg: #0a0812;
-  --fg: #f1ecfb;
-  --muted: #a79ec6;
-  --border: rgba(184, 166, 236, 0.14);
+  /* base — warm near-black, sampled from the headshot's background */
+  --bg: #0c0908;
+  --fg: #f5efe6;
+  --muted: #b8a89a;
+  --border: rgba(224, 180, 140, 0.14);
 
   /* raised / glass surfaces */
-  --surface-solid: #15111f;
-  --glass-bg: rgba(26, 20, 44, 0.55);
-  --glass-bg-strong: rgba(30, 22, 52, 0.72);
-  --glass-border: rgba(202, 182, 255, 0.16);
+  --surface-solid: #1a1411;
+  --glass-bg: rgba(30, 22, 18, 0.55);
+  --glass-bg-strong: rgba(34, 24, 20, 0.72);
+  --glass-border: rgba(224, 180, 140, 0.16);
   --glass-highlight: rgba(255, 255, 255, 0.06);
   --blur: 14px;
 
-  /* accents — magenta / purple / phthalo blue */
-  --magenta: #ff4d9d;
-  --purple: #b06bff;
-  --blue: #3d7dff;
-  --accent: var(--purple);
-  --gradient: linear-gradient(115deg, #ff4d9d 0%, #b06bff 46%, #3d7dff 100%);
+  /* accents — crimson / wine / gold, sampled from the headshot: hair, lips, jewelry */
+  --crimson: #ef2f47;
+  --wine: #d9526d;
+  --gold: #dc9a44;
+  --accent: var(--wine);
+  --gradient: linear-gradient(115deg, #ef2f47 0%, #d9526d 46%, #dc9a44 100%);
 
-  --glow: 0 10px 44px -10px rgba(176, 107, 255, 0.4);
+  --glow: 0 10px 44px -10px rgba(217, 82, 109, 0.4);
 
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
@@ -48,26 +48,26 @@ body {
   min-height: 100dvh; /* avoids the resize "wobble" as mobile browser chrome shows/hides */
   overflow-x: hidden;
   overscroll-behavior-x: none;
-  /* ambient magenta / phthalo / purple wash behind the content */
+  /* ambient crimson / gold / wine wash behind the content */
   background:
     radial-gradient(
       1000px 640px at 4% -6%,
-      rgba(255, 77, 157, 0.42),
+      rgba(239, 47, 71, 0.42),
       transparent 58%
     ),
     radial-gradient(
       1150px 780px at 106% 0%,
-      rgba(61, 125, 255, 0.38),
+      rgba(220, 154, 68, 0.38),
       transparent 55%
     ),
     radial-gradient(
       1050px 900px at 50% 116%,
-      rgba(176, 107, 255, 0.4),
+      rgba(217, 82, 109, 0.4),
       transparent 58%
     ),
     radial-gradient(
       720px 600px at 92% 62%,
-      rgba(255, 77, 157, 0.16),
+      rgba(239, 47, 71, 0.16),
       transparent 62%
     ),
     var(--bg);
@@ -89,7 +89,7 @@ a {
 }
 
 a:hover {
-  color: var(--magenta);
+  color: var(--crimson);
 }
 
 h1,
@@ -104,7 +104,7 @@ img {
 }
 
 ::selection {
-  background: rgba(255, 77, 157, 0.32);
+  background: rgba(239, 47, 71, 0.32);
   color: #fff;
 }
 
