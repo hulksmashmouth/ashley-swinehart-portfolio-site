@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw source video (too large for git); the compressed .mp4 is what ships
+public/**/*.MOV

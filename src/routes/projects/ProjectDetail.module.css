@@ -157,6 +157,18 @@
   box-shadow: 0 16px 44px -16px rgba(220, 154, 68, 0.4);
 }
 
+.video {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  background: #000;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 44px -16px rgba(220, 154, 68, 0.4);
+}
+
 .highlightTitle {
   font-weight: 600;
 }

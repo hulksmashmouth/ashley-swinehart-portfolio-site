@@ -16,6 +16,18 @@ function DollyPocket() {
         <p className={styles.summary}>{dollyPocket.overview}</p>
       </div>
 
+      <video
+        className={styles.video}
+        src={`/${dollyPocket.video.src}`}
+        poster={`/${dollyPocket.video.poster}`}
+        width={dollyPocket.video.width}
+        height={dollyPocket.video.height}
+        controls
+        playsInline
+        preload="none"
+        aria-label={`${dollyPocket.name} — commercial`}
+      />
+
       <dl className={styles.specs}>
         {dollyPocket.specs.map((s) => (
           <div key={s.label} className={styles.spec}>
@@ -25,7 +37,7 @@ function DollyPocket() {
         ))}
       </dl>
 
-      <h2 className={styles.blockTitle}>Build progress</h2>
+      <h2 className={styles.blockTitle}>The build</h2>
       <ul className={styles.highlights}>
         {dollyPocket.shots.map((shot) => (
           <li key={shot.title} className={styles.highlight}>

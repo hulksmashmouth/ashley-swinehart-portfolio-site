@@ -11,9 +11,15 @@ export const dollyPocket = {
   name: 'Dolly Pocket',
   tagline:
     'A fully offline AI assistant with Dolly Parton’s voice, built into a vintage Polly Pocket',
-  status: 'In progress — targeted for October 2026',
+  status: 'Completed October 2026',
   overview:
     'Dolly Pocket is a self-contained AI assistant that runs entirely on-device. A React Native app talks to a local Ollama model, so there are no API keys and nothing leaves the hardware. The assistant answers in Dolly Parton’s speaking style, wrapped in a UI themed to match. The whole thing is a cyberdeck packed into a vintage Polly Pocket compact — a Raspberry Pi 5, a small HDMI display, stereo speakers, and NVMe storage inside the clamshell.',
+  video: {
+    src: 'dolly-pocket/dolly-pocket.mp4',
+    poster: 'dolly-pocket/video-poster.webp',
+    width: 720,
+    height: 1280,
+  },
   specs: [
     { label: 'Compute', value: 'Raspberry Pi 5, 8GB RAM' },
     { label: 'Storage', value: '512GB NVMe SSD on a Pimoroni NVMe Base' },
