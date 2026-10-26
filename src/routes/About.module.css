@@ -73,9 +73,7 @@
 .snapshots {
   display: flex;
   flex-direction: column;
-  align-self: center;
   gap: 12px;
-  max-width: 480px;
 }
 
 .snapshotRow {
@@ -123,9 +121,7 @@
 .den {
   display: flex;
   flex-direction: column;
-  align-self: center;
   gap: 8px;
-  max-width: 480px;
 }
 
 .den img {

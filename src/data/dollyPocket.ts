@@ -103,5 +103,36 @@ export const dollyPocket = {
       width: 1200,
       height: 1600,
     },
+    {
+      title: 'All wired up',
+      caption:
+        'Everything seated and wired inside the shell: the Pi 5 and NVMe Base in the tray, the screen and speakers in a glittered lid.',
+      image: 'dolly-pocket/assembled-open.webp',
+      width: 360,
+      height: 480,
+    },
+    {
+      title: 'Bedazzled',
+      caption:
+        'The closed compact covered in rhinestones, pearls, and jewel hearts, with a portrait of Dolly on the lid.',
+      image: 'dolly-pocket/bedazzled-lid.webp',
+      width: 768,
+      height: 1024,
+    },
+    {
+      title: 'Keyboard',
+      caption:
+        'A compact wireless keyboard with a built-in touchpad for typing to Dolly, sized to the shell.',
+      image: 'dolly-pocket/keyboard.webp',
+      width: 360,
+      height: 480,
+    },
+    {
+      title: 'The finished build',
+      caption: 'Dolly Pocket powered on and running, with the chat UI on screen.',
+      image: 'dolly-pocket/finished-build.webp',
+      width: 360,
+      height: 640,
+    },
   ] as BuildShot[],
 }

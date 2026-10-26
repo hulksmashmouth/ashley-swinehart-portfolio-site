@@ -9,7 +9,7 @@ function About() {
       </h1>
 
       <p className={styles.opener}>
-        I&rsquo;m Ashley, a UX strategist, designer, and front-end engineer
+        I&rsquo;m Ash, a UX strategist, designer, and front-end engineer
         based in Northeast Ohio.
       </p>
 
