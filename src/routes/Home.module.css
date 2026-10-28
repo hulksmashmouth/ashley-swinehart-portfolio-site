@@ -15,6 +15,13 @@
     0 0 0 1px rgba(195, 150, 173, 0.12);
 }
 
+/* full-bleed on phones; on wider screens the photo shouldn't swallow the first screen */
+@media (min-width: 768px) {
+  .photo {
+    max-width: 380px;
+  }
+}
+
 .heading {
   display: flex;
   flex-direction: column;
