@@ -12,7 +12,7 @@
   border: 1px solid var(--glass-border);
   box-shadow:
     var(--glow),
-    0 0 0 1px rgba(239, 47, 71, 0.12);
+    0 0 0 1px rgba(195, 150, 173, 0.12);
 }
 
 .heading {
@@ -66,8 +66,10 @@
 
 .greeting {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -76,8 +78,47 @@
 
 .title {
   margin: 0;
-  font-size: clamp(2rem, 6vw, 3.25rem);
-  max-width: 18ch;
+  font-size: clamp(2.4rem, 7vw, 3.9rem);
+  line-height: 1.05;
+  max-width: 16ch;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 360px;
+  color: var(--gold);
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: var(--mauve);
+  opacity: 0.6;
+}
+
+.disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.disciplines li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 12px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: var(--mauve);
 }
 
 .body {
@@ -93,7 +134,7 @@
 }
 
 .body strong {
-  color: var(--crimson);
+  color: var(--rose);
   font-weight: 600;
 }
 

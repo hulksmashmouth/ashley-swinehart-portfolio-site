@@ -4,6 +4,22 @@
   gap: 28px;
 }
 
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glow);
+}
+
+/* at phone width the banner's own type is too small to read — the page heading carries it */
+@media (max-width: 600px) {
+  .banner {
+    display: none;
+  }
+}
+
 .head {
   display: flex;
   flex-direction: column;
@@ -24,7 +40,8 @@
   background: var(--gradient);
   box-shadow: var(--glow);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
 }
 
 .intro {
@@ -43,7 +60,8 @@
   margin: 0;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
   color: var(--fg);
   padding-bottom: 8px;
   border-bottom: 2px solid transparent;
@@ -73,7 +91,7 @@
 
 .serviceTitle {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
 }
 
 .serviceDesc {
@@ -92,7 +110,7 @@
 }
 
 .engagements li::marker {
-  color: var(--wine);
+  color: var(--mauve);
 }
 
 .cta {
@@ -120,7 +138,7 @@
 }
 
 .cta a:hover {
-  color: var(--crimson);
+  color: var(--rose);
 }
 
 @media (max-width: 600px) {

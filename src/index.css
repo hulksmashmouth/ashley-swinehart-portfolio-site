@@ -1,31 +1,37 @@
 :root {
   color-scheme: dark;
 
-  /* base — warm near-black, sampled from the headshot's background */
-  --bg: #0c0908;
-  --fg: #f5efe6;
-  --muted: #c7b9ac;
-  --border: rgba(224, 180, 140, 0.14);
+  /* base — inky midnight, sampled from the Ashley Swinehart, LLC brand banners */
+  --bg: #101018;
+  --fg: #f4ead9;
+  --muted: #b9adb8;
+  --border: rgba(195, 150, 173, 0.18);
 
   /* raised / glass surfaces */
-  --surface-solid: #1a1411;
-  --glass-bg: rgba(30, 22, 18, 0.55);
-  --glass-bg-strong: rgba(34, 24, 20, 0.72);
-  --glass-border: rgba(224, 180, 140, 0.16);
-  --glass-highlight: rgba(255, 255, 255, 0.06);
+  --surface-solid: #18171f;
+  --glass-bg: rgba(26, 24, 34, 0.55);
+  --glass-bg-strong: rgba(22, 21, 30, 0.78);
+  --glass-border: rgba(195, 150, 173, 0.2);
+  --glass-highlight: rgba(244, 234, 217, 0.06);
   --blur: 14px;
 
-  /* accents — crimson / wine / gold, sampled from the headshot: hair, lips, jewelry */
-  --crimson: #ef2f47;
-  --wine: #d9526d;
-  --gold: #dc9a44;
-  --accent: var(--wine);
-  --gradient: linear-gradient(115deg, #ef2f47 0%, #d9526d 46%, #dc9a44 100%);
+  /* accents — orbit mauve, sparkle rose, star gold */
+  --mauve: #c396ad;
+  --rose: #d6a3ba;
+  --plum: #8f6680;
+  --gold: #dbb077;
+  --accent: var(--mauve);
+  --gradient: linear-gradient(115deg, #d6a3ba 0%, #c396ad 42%, #dbb077 100%);
 
-  --glow: 0 10px 44px -10px rgba(217, 82, 109, 0.4);
+  --glow: 0 10px 44px -12px rgba(195, 150, 173, 0.38);
 
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
+  /* type — high-contrast serif from the monogram, wide-tracked geometric sans from the wordmark */
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-sans: "Jost", "Avenir Next", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --tracking-wide: 0.18em;
+
+  font-family: var(--font-sans);
+  line-height: 1.65;
   color: var(--fg);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -48,27 +54,22 @@ body {
   min-height: 100dvh; /* avoids the resize "wobble" as mobile browser chrome shows/hides */
   overflow-x: hidden;
   overscroll-behavior-x: none;
-  /* ambient crimson / gold / wine wash behind the content */
+  /* faint orbit-glow washes behind the content — the orbits themselves are drawn by <Cosmos /> */
   background:
     radial-gradient(
-      1000px 640px at 4% -6%,
-      rgba(239, 47, 71, 0.42),
+      900px 600px at 0% -8%,
+      rgba(195, 150, 173, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 700px at 104% 4%,
+      rgba(143, 102, 128, 0.18),
       transparent 58%
     ),
     radial-gradient(
-      1150px 780px at 106% 0%,
-      rgba(220, 154, 68, 0.38),
-      transparent 55%
-    ),
-    radial-gradient(
-      1050px 900px at 50% 116%,
-      rgba(217, 82, 109, 0.4),
-      transparent 58%
-    ),
-    radial-gradient(
-      720px 600px at 92% 62%,
-      rgba(239, 47, 71, 0.16),
-      transparent 62%
+      1000px 800px at 50% 118%,
+      rgba(219, 176, 119, 0.08),
+      transparent 60%
     ),
     var(--bg);
   /* fixed backgrounds are unreliable on mobile Safari/Chrome (repaint jank as the
@@ -89,13 +90,25 @@ a {
 }
 
 a:hover {
-  color: var(--crimson);
+  color: var(--rose);
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+strong,
+b {
+  font-weight: 600;
 }
 
 img {
@@ -104,7 +117,7 @@ img {
 }
 
 ::selection {
-  background: rgba(239, 47, 71, 0.32);
+  background: rgba(195, 150, 173, 0.35);
   color: #fff;
 }
 
@@ -114,4 +127,12 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
 }

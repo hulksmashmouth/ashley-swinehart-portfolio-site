@@ -55,7 +55,7 @@
 .card:hover {
   text-decoration: none;
   transform: translateY(-3px);
-  border-color: rgba(239, 47, 71, 0.4);
+  border-color: rgba(195, 150, 173, 0.4);
   box-shadow:
     0 1px 0 var(--glass-highlight) inset,
     var(--glow);
@@ -86,12 +86,13 @@
   color: var(--muted);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
 }
 
 .name {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.65rem;
 }
 
 .blurb {

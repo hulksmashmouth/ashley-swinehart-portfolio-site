@@ -14,7 +14,7 @@
 
 .name {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 .title {
@@ -60,7 +60,7 @@
 }
 
 .links a:hover {
-  color: var(--crimson);
+  color: var(--rose);
 }
 
 .section {
@@ -73,7 +73,8 @@
   margin: 0;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
   color: var(--fg);
   padding-bottom: 8px;
   border-bottom: 2px solid transparent;
@@ -136,7 +137,8 @@
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -145,7 +147,7 @@
 
 .jobRole {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
 }
 
 .jobMeta {
@@ -206,7 +208,7 @@
 }
 
 .bullets li::marker {
-  color: var(--wine);
+  color: var(--mauve);
 }
 
 .projectDesc {

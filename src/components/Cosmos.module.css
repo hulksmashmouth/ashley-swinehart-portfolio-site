@@ -1,0 +1,85 @@
+.cosmos {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.topRight,
+.bottomLeft {
+  position: absolute;
+  width: min(600px, 90vw);
+  height: auto;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.orbit {
+  stroke: var(--mauve);
+  stroke-width: 1.4;
+  opacity: 0.5;
+}
+
+.orbitFaint {
+  stroke: var(--mauve);
+  stroke-width: 1.2;
+  opacity: 0.22;
+}
+
+.dotted {
+  stroke: var(--rose);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0.1 9;
+  opacity: 0.45;
+}
+
+.moon {
+  fill: var(--plum);
+  opacity: 0.8;
+}
+
+.goldDot {
+  fill: var(--gold);
+  opacity: 0.8;
+}
+
+.sparkle {
+  position: absolute;
+  display: block;
+  line-height: 0;
+  color: var(--gold);
+  opacity: 0.7;
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+.sparkle[data-tone="rose"] {
+  color: var(--rose);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 640px) {
+  .sparkle {
+    opacity: 0.5;
+  }
+}

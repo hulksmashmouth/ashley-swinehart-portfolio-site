@@ -1,4 +1,6 @@
 .shell {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -33,12 +35,36 @@
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.1rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: var(--fg);
+}
+
+.brand:hover {
+  color: var(--fg);
+}
+
+.monogram {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.brand:hover .monogram {
+  box-shadow: 0 0 0 3px rgba(219, 176, 119, 0.25);
+}
+
+.wordmark {
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
 }
 
 .nav {
@@ -79,10 +105,27 @@
 }
 
 .footer {
-  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0 32px;
   border-top: 1px solid var(--border);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--mauve);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.footerStar {
+  color: var(--gold);
 }
 
 /* mobile menu toggle — hidden on desktop, where the nav is always visible inline */

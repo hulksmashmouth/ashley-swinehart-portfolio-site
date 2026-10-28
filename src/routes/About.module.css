@@ -26,7 +26,8 @@
   font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-wide);
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -64,7 +65,7 @@
 .closer {
   margin: 0;
   max-width: 55ch;
-  color: var(--crimson);
+  color: var(--rose);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.35;
@@ -95,7 +96,7 @@
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 16px 44px -18px rgba(220, 154, 68, 0.4);
+  box-shadow: 0 16px 44px -18px rgba(219, 176, 119, 0.4);
 }
 
 /* each figure's box matches that photo's own orientation, so cover never
@@ -130,7 +131,7 @@
   height: auto;
   border-radius: 16px;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 16px 44px -18px rgba(239, 47, 71, 0.35);
+  box-shadow: 0 16px 44px -18px rgba(195, 150, 173, 0.35);
 }
 
 .denCaption {

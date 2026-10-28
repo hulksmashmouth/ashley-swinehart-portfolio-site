@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SparkleDivider } from '../components/Sparkle'
 import { resume } from '../data/resume'
 import styles from './Home.module.css'
 
@@ -16,6 +17,13 @@ function Home() {
       <div className={styles.heading}>
         <p className={styles.greeting}>Hi, I&rsquo;m Ash.</p>
         <h1 className={styles.title}>I make complicated things make sense.</h1>
+        <SparkleDivider className={styles.divider} />
+        <ul className={styles.disciplines}>
+          <li>UX Strategy</li>
+          <li>Design Systems</li>
+          <li>Product Strategy</li>
+          <li>UX Engineering</li>
+        </ul>
 
         <div className={styles.ctas}>
           <Link to="/projects" className={styles.ctaPrimary}>
