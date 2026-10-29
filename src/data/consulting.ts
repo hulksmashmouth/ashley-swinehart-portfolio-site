@@ -7,7 +7,7 @@ export const consulting = {
   entity: 'Ashley Swinehart, LLC',
   available: true,
   intro:
-    'I take on B2B contract work through Ashley Swinehart, LLC — a one-person consultancy for teams that need senior UX engineering and design systems help without adding headcount.',
+    'I take on contract work through Ashley Swinehart, LLC — a one-person consultancy for product teams that need senior UX engineering and design systems help without adding headcount, and for small businesses that need a website, an online store, or photos that do them justice.',
   services: [
     {
       title: 'Design System Architecture & Build-Out',
@@ -38,6 +38,16 @@ export const consulting = {
       title: 'Design System Strategy & Audits',
       description:
         'Assessing an existing design system as product infrastructure — finding the consistency, speed, and quality gaps, and laying out a roadmap to close them.',
+    },
+    {
+      title: 'Small Business Websites & Online Stores',
+      description:
+        'WordPress or fully custom websites for small businesses, plus online storefronts set up and ready to take orders — built to be easy to update after launch.',
+    },
+    {
+      title: 'Photography for Your Site',
+      description:
+        'Product, space, and headshot photography shot for your website, so the site launches with images that actually look like your business instead of stock.',
     },
   ] satisfies Service[],
   engagements: [
