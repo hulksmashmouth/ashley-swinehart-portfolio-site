@@ -113,6 +113,20 @@
   color: var(--mauve);
 }
 
+.bookingIntro {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+.booking {
+  height: 720px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+}
+
 .cta {
   display: flex;
   flex-direction: column;
@@ -142,6 +156,10 @@
 }
 
 @media (max-width: 600px) {
+  .booking {
+    height: 860px;
+  }
+
   .services {
     grid-template-columns: 1fr;
     gap: 14px;

@@ -55,6 +55,10 @@ export const consulting = {
     'Fractional / retainer (ongoing hours each month)',
     'Advisory (reviews, architecture guidance, team coaching)',
   ],
+  // Cal.com booking link, e.g. 'ash-swinehart/intro-call' — the booking section stays hidden until this is set
+  booking: {
+    calLink: 'ash-swinehart-zbcw8d/30min',
+  },
   contact: {
     label: 'linkedin.com/in/ashleylswinehart',
     href: 'https://www.linkedin.com/in/ashleylswinehart',

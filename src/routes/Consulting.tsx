@@ -1,3 +1,4 @@
+import BookingEmbed from '../components/BookingEmbed'
 import { consulting } from '../data/consulting'
 import styles from './Consulting.module.css'
 
@@ -42,11 +43,26 @@ function Consulting() {
         </ul>
       </section>
 
+      {consulting.booking.calLink && (
+        <section id="book" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Book a call</h2>
+          <p className={styles.bookingIntro}>
+            Pick a time that works for you. You&rsquo;ll get a calendar invite
+            as soon as it&rsquo;s booked.
+          </p>
+          <div className={styles.booking}>
+            <BookingEmbed calLink={consulting.booking.calLink} />
+          </div>
+        </section>
+      )}
+
       <section className={styles.cta}>
         <h2 className={styles.sectionTitle}>Work together</h2>
         <p>
-          {consulting.entity} is taking on new clients. The fastest way to start
-          a conversation is a message on{' '}
+          {consulting.entity} is taking on new clients.{' '}
+          {consulting.booking.calLink
+            ? 'Book a call above, or send a message on '
+            : 'The fastest way to start a conversation is a message on '}
           <a href={consulting.contact.href} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
