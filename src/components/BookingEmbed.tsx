@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Cal, { getCalApi } from '@calcom/embed-react'
+import { trackEvent } from '../analytics'
 
 type BookingEmbedProps = {
   calLink: string
@@ -42,8 +43,13 @@ function BookingEmbed({ calLink, className }: BookingEmbedProps) {
         hideEventTypeDetails: false,
         layout: 'month_view',
       })
+      // a completed booking is the site's main conversion
+      cal('on', {
+        action: 'bookingSuccessfulV2',
+        callback: () => trackEvent('booking_completed', { label: calLink }),
+      })
     })
-  }, [])
+  }, [calLink])
 
   return (
     <Cal

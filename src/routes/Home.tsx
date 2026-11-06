@@ -26,13 +26,29 @@ function Home() {
         </ul>
 
         <div className={styles.ctas}>
-          <Link to="/projects" className={styles.ctaPrimary}>
+          <Link
+            to="/projects"
+            className={styles.ctaPrimary}
+            data-track="cta_click"
+            data-track-label="home_view_work"
+          >
             View my work
           </Link>
-          <Link to="/consulting" className={styles.ctaSecondary}>
+          <Link
+            to="/consulting"
+            className={styles.ctaSecondary}
+            data-track="cta_click"
+            data-track-label="home_get_in_touch"
+          >
             Get in touch
           </Link>
-          <a className={styles.ctaSecondary} href={`/${resume.pdf}`} download>
+          <a
+            className={styles.ctaSecondary}
+            href={`/${resume.pdf}`}
+            download
+            data-track="resume_download"
+            data-track-label="home"
+          >
             Download résumé
           </a>
         </div>
@@ -87,10 +103,20 @@ function Home() {
           </li>
         </ul>
         <div className={styles.ctas}>
-          <Link to="/consulting" className={styles.ctaPrimary}>
+          <Link
+            to="/consulting"
+            className={styles.ctaPrimary}
+            data-track="cta_click"
+            data-track-label="small_business_talk"
+          >
             Let&rsquo;s talk about your site
           </Link>
-          <Link to="/photography" className={styles.ctaSecondary}>
+          <Link
+            to="/photography"
+            className={styles.ctaSecondary}
+            data-track="cta_click"
+            data-track-label="small_business_photography"
+          >
             See my photography
           </Link>
         </div>

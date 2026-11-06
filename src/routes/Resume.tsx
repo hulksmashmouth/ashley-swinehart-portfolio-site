@@ -9,7 +9,13 @@ function Resume() {
           <h1 className={styles.name}>{resume.name}</h1>
           <p className={styles.title}>{resume.title}</p>
         </div>
-        <a className={styles.download} href={`/${resume.pdf}`} download>
+        <a
+          className={styles.download}
+          href={`/${resume.pdf}`}
+          download
+          data-track="resume_download"
+          data-track-label="resume_page"
+        >
           Download PDF
         </a>
       </header>

@@ -12,7 +12,12 @@ function Projects() {
       <ul className={styles.grid}>
         {projectIndex.map((p) => (
           <li key={p.slug}>
-            <Link to={`/projects/${p.slug}`} className={styles.card}>
+            <Link
+              to={`/projects/${p.slug}`}
+              className={styles.card}
+              data-track="select_project"
+              data-track-label={p.slug}
+            >
               {p.image && (
                 <img
                   className={styles.thumb}

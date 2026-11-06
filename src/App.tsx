@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
+import { trackPageView } from './analytics'
 import Backdrop from './components/Backdrop'
 import { CubeLamp } from './components/Lamp'
 import styles from './App.module.css'
@@ -14,6 +15,11 @@ function App() {
   // close the mobile menu whenever a navigation happens
   useEffect(() => {
     setMenuOpen(false)
+  }, [location.pathname])
+
+  // the router changes pages without a reload, so each route is reported to GA here
+  useEffect(() => {
+    trackPageView(location.pathname)
   }, [location.pathname])
 
   return (

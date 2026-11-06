@@ -63,7 +63,13 @@ function Consulting() {
           {consulting.booking.calLink
             ? 'Book a call above, or send a message on '
             : 'The fastest way to start a conversation is a message on '}
-          <a href={consulting.contact.href} target="_blank" rel="noreferrer">
+          <a
+            href={consulting.contact.href}
+            target="_blank"
+            rel="noreferrer"
+            data-track="contact_click"
+            data-track-label="linkedin"
+          >
             LinkedIn
           </a>
           .

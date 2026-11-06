@@ -52,6 +52,8 @@ function Photography() {
             type="button"
             className={styles.item}
             onClick={() => setOpenIndex(i)}
+            data-track="photo_open"
+            data-track-label={photo.src}
             aria-label={`Open photograph ${i + 1} of ${photos.length}`}
           >
             <img
