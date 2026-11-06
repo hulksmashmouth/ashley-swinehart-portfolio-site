@@ -44,7 +44,7 @@ function Consulting() {
       </section>
 
       {consulting.booking.calLink && (
-        <section id="book" className={styles.section}>
+        <section id="book" className={`${styles.section} ${styles.bookSection}`}>
           <h2 className={styles.sectionTitle}>Book a call</h2>
           <p className={styles.bookingIntro}>
             Pick a time that works for you. You&rsquo;ll get a calendar invite

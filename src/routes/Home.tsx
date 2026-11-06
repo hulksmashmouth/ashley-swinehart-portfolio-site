@@ -27,20 +27,20 @@ function Home() {
 
         <div className={styles.ctas}>
           <Link
-            to="/projects"
+            to="/consulting#book"
             className={styles.ctaPrimary}
+            data-track="cta_click"
+            data-track-label="home_book_call"
+          >
+            Book a call
+          </Link>
+          <Link
+            to="/projects"
+            className={styles.ctaSecondary}
             data-track="cta_click"
             data-track-label="home_view_work"
           >
             View my work
-          </Link>
-          <Link
-            to="/consulting"
-            className={styles.ctaSecondary}
-            data-track="cta_click"
-            data-track-label="home_get_in_touch"
-          >
-            Get in touch
           </Link>
           <a
             className={styles.ctaSecondary}
@@ -52,6 +52,9 @@ function Home() {
             Download résumé
           </a>
         </div>
+        <p className={styles.ctaNote}>
+          A 30-minute intro call &mdash; pick any open time on my calendar.
+        </p>
       </div>
 
       <div className={styles.body}>
@@ -104,12 +107,12 @@ function Home() {
         </ul>
         <div className={styles.ctas}>
           <Link
-            to="/consulting"
+            to="/consulting#book"
             className={styles.ctaPrimary}
             data-track="cta_click"
-            data-track-label="small_business_talk"
+            data-track-label="small_business_book_call"
           >
-            Let&rsquo;s talk about your site
+            Book a call about your site
           </Link>
           <Link
             to="/photography"

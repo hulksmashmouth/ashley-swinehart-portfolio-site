@@ -46,6 +46,12 @@
   transition: filter 0.15s ease;
 }
 
+.ctaNote {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .ctaPrimary:hover {
   color: var(--bg);
   filter: brightness(1.1);
