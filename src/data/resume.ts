@@ -21,7 +21,7 @@ export const resume = {
     },
   ],
   summary:
-    'I am a UX engineering leader at the intersection of design systems, front-end architecture, and AI-assisted product development. I scale enterprise experience ecosystems across automotive, real estate, and supply chain SaaS — building design systems, token-driven UI architecture, and dev pipelines integrated with AI workflows, backed by deep Angular/TypeScript expertise and leadership of distributed engineering teams.',
+    'I am a UX engineering leader at the intersection of design systems, front-end architecture, and AI-assisted product development. I scale enterprise experience ecosystems across automotive, real estate, and supply chain SaaS — building design systems, token-driven UI architecture, and dev pipelines integrated with AI workflows, backed by deep React, Angular, and TypeScript expertise and leadership of distributed engineering teams.',
   experience: [
     {
       role: 'UX Strategy & Platform Experience Manager',

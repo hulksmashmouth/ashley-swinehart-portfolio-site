@@ -17,7 +17,7 @@ export const consulting = {
     {
       title: 'Front-End Architecture & Modernization',
       description:
-        'Angular and TypeScript front-ends, incremental modernization of legacy interfaces, and bridging modern component UIs to existing backends without a rewrite.',
+        'React, Angular, and TypeScript front-ends, incremental modernization of legacy interfaces, and bridging modern component UIs to existing backends without a rewrite.',
     },
     {
       title: 'UX Engineering (Design to Code)',
@@ -32,7 +32,7 @@ export const consulting = {
     {
       title: 'Fractional UX Engineering Leadership',
       description:
-        'Standing up or steadying a distributed front-end or design-system team: sprint planning, releases, and mentoring engineers on Angular, web components, and TypeScript.',
+        'Standing up or steadying a distributed front-end or design-system team: sprint planning, releases, and mentoring engineers on React, Angular, web components, and TypeScript.',
     },
     {
       title: 'Design System Strategy & Audits',
