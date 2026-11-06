@@ -1,34 +1,39 @@
 :root {
   color-scheme: dark;
 
-  /* base — inky midnight, sampled from the Ashley Swinehart, LLC brand banners */
-  --bg: #101018;
-  --fg: #f4ead9;
-  --muted: #b9adb8;
-  --border: rgba(195, 150, 173, 0.18);
+  /* base — dark walnut with bright white type, sampled from the den logo and banner */
+  --bg: #1c0e07;
+  --fg: #fff6ea;
+  --muted: #dcc3a2;
+  --border: rgba(232, 140, 70, 0.2);
 
-  /* raised / glass surfaces */
-  --surface-solid: #18171f;
-  --glass-bg: rgba(26, 24, 34, 0.55);
-  --glass-bg-strong: rgba(22, 21, 30, 0.78);
-  --glass-border: rgba(195, 150, 173, 0.2);
-  --glass-highlight: rgba(244, 234, 217, 0.06);
+  /* raised / glass surfaces — smoked brown glass over the paneling */
+  --surface-solid: #2b160b;
+  --glass-bg: rgba(64, 28, 8, 0.55);
+  --glass-bg-strong: rgba(48, 21, 6, 0.82);
+  --glass-border: rgba(232, 150, 80, 0.24);
+  --glass-highlight: rgba(255, 228, 186, 0.07);
   --blur: 14px;
 
-  /* accents — orbit mauve, sparkle rose, star gold */
-  --mauve: #c396ad;
-  --rose: #d6a3ba;
-  --plum: #8f6680;
-  --gold: #dbb077;
-  --accent: var(--mauve);
-  --gradient: linear-gradient(115deg, #d6a3ba 0%, #c396ad 42%, #dbb077 100%);
+  /* accents — the banner's red-orange → orange → mustard wash, avocado, and the neon sign */
+  --red-orange: #e2431f;
+  --orange: #f37b26;
+  --gold: #e9b93a;
+  --avocado: #a2ab5c;
+  --neon: #ff62b8;
+  --pine: #9a4c17;
+  --accent: var(--orange);
+  --gradient: linear-gradient(115deg, #e2431f 0%, #f37b26 48%, #e9b93a 100%);
+  /* top-to-bottom, the way the photo overlay runs in the logo and banner */
+  --sunset: linear-gradient(180deg, #e2431f 0%, #f37b26 50%, #d6b437 100%);
 
-  --glow: 0 10px 44px -12px rgba(195, 150, 173, 0.38);
+  --glow: 0 10px 44px -12px rgba(243, 123, 38, 0.45);
+  --neon-glow: 0 0 6px rgba(255, 98, 184, 0.75), 0 0 18px rgba(255, 98, 184, 0.45);
 
-  /* type — high-contrast serif from the monogram, wide-tracked geometric sans from the wordmark */
-  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  /* type — soft, chunky '70s serif for display; Futura-style geometric sans for everything else */
+  --font-display: "Fraunces", "Cooper Black", Georgia, "Times New Roman", serif;
   --font-sans: "Jost", "Avenir Next", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --tracking-wide: 0.18em;
+  --tracking-wide: 0.16em;
 
   font-family: var(--font-sans);
   line-height: 1.65;
@@ -54,23 +59,35 @@ body {
   min-height: 100dvh; /* avoids the resize "wobble" as mobile browser chrome shows/hides */
   overflow-x: hidden;
   overscroll-behavior-x: none;
-  /* faint orbit-glow washes behind the content — the orbits themselves are drawn by <Cosmos /> */
+  /* the den after dark: Ash's actual knotty-pine paneling, the orange cube lamp's glow,
+     and the neon washing pink across the ceiling. The center is dimmed a little so
+     body copy sitting straight on the wood stays easy to read. */
   background:
     radial-gradient(
-      900px 600px at 0% -8%,
-      rgba(195, 150, 173, 0.16),
+      760px 520px at 8% -4%,
+      rgba(243, 123, 38, 0.34),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 520px at 96% -10%,
+      rgba(255, 98, 184, 0.3),
       transparent 60%
     ),
     radial-gradient(
-      900px 700px at 104% 4%,
-      rgba(143, 102, 128, 0.18),
-      transparent 58%
-    ),
-    radial-gradient(
-      1000px 800px at 50% 118%,
-      rgba(219, 176, 119, 0.08),
+      1100px 700px at 50% 120%,
+      rgba(214, 180, 55, 0.16),
       transparent 60%
     ),
+    linear-gradient(
+      90deg,
+      rgba(20, 8, 2, 0.35) 0%,
+      rgba(20, 8, 2, 0) 18%,
+      rgba(20, 8, 2, 0.38) 34%,
+      rgba(20, 8, 2, 0.38) 66%,
+      rgba(20, 8, 2, 0) 82%,
+      rgba(20, 8, 2, 0.35) 100%
+    ),
+    url("/brand/pine-paneling.webp") center top / 520px auto repeat,
     var(--bg);
   /* fixed backgrounds are unreliable on mobile Safari/Chrome (repaint jank as the
      address bar collapses) — only pin it once there's room for it to matter. */
@@ -90,7 +107,7 @@ a {
 }
 
 a:hover {
-  color: var(--rose);
+  color: var(--neon);
 }
 
 h1,
@@ -98,12 +115,10 @@ h2,
 h3 {
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: 0.005em;
-}
-
-h1 {
-  font-weight: 500;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 
 strong,
@@ -117,7 +132,7 @@ img {
 }
 
 ::selection {
-  background: rgba(195, 150, 173, 0.35);
+  background: rgba(243, 123, 38, 0.4);
   color: #fff;
 }
 

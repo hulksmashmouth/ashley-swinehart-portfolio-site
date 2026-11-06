@@ -1,0 +1,34 @@
+/* the whole plant: a slow rock from the soil line, like air moving through the room */
+.plant {
+  transform-box: view-box;
+  animation: rock 11s ease-in-out infinite;
+}
+
+/* each leaf: a small flutter around where it meets its stem (the leaf's local 0, 0) */
+.leaf {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation-name: flutter;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rock {
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+@keyframes flutter {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}

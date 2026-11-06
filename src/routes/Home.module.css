@@ -12,7 +12,7 @@
   border: 1px solid var(--glass-border);
   box-shadow:
     var(--glow),
-    0 0 0 1px rgba(195, 150, 173, 0.12);
+    0 0 0 1px rgba(243, 123, 38, 0.12);
 }
 
 /* full-bleed on phones; on wider screens the photo shouldn't swallow the first screen */
@@ -77,10 +77,9 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  /* lit like the neon sign in the den */
+  color: #ffd6ee;
+  text-shadow: var(--neon-glow);
 }
 
 .title {
@@ -101,7 +100,7 @@
 .divider span {
   flex: 1;
   height: 1px;
-  background: var(--mauve);
+  background: var(--orange);
   opacity: 0.6;
 }
 
@@ -125,7 +124,7 @@
   margin: 0 12px;
   border-radius: 50%;
   vertical-align: middle;
-  background: var(--mauve);
+  background: var(--orange);
 }
 
 .body {
@@ -141,7 +140,7 @@
 }
 
 .body strong {
-  color: var(--rose);
+  color: var(--neon);
   font-weight: 600;
 }
 
@@ -188,11 +187,11 @@
 }
 
 .smallBizList li::marker {
-  color: var(--mauve);
+  color: var(--orange);
 }
 
 .smallBizList strong {
-  color: var(--rose);
+  color: var(--neon);
 }
 
 .smallBiz .ctas {

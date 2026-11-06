@@ -7,10 +7,10 @@ function Consulting() {
     <div className={styles.page}>
       <img
         className={styles.banner}
-        src="/brand/banner-monogram.jpg"
-        alt="Ashley Swinehart, LLC — UX strategy, design systems, product strategy, UX engineering. Thoughtful design. Smarter systems. Better experiences."
-        width={2508}
-        height={627}
+        src="/brand/banner.jpg"
+        alt="Ashley Swinehart, LLC — UX, web, design systems, product."
+        width={1640}
+        height={624}
       />
 
       <header className={styles.head}>

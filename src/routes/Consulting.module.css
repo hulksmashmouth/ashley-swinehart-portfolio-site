@@ -13,13 +13,6 @@
   box-shadow: var(--glow);
 }
 
-/* at phone width the banner's own type is too small to read — the page heading carries it */
-@media (max-width: 600px) {
-  .banner {
-    display: none;
-  }
-}
-
 .head {
   display: flex;
   flex-direction: column;
@@ -91,7 +84,7 @@
 
 .serviceTitle {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 
 .serviceDesc {
@@ -110,7 +103,7 @@
 }
 
 .engagements li::marker {
-  color: var(--mauve);
+  color: var(--orange);
 }
 
 .bookingIntro {
@@ -152,7 +145,7 @@
 }
 
 .cta a:hover {
-  color: var(--rose);
+  color: var(--neon);
 }
 
 @media (max-width: 600px) {

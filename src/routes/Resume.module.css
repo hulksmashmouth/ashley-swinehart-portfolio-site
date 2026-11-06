@@ -60,7 +60,7 @@
 }
 
 .links a:hover {
-  color: var(--rose);
+  color: var(--neon);
 }
 
 .section {
@@ -208,7 +208,7 @@
 }
 
 .bullets li::marker {
-  color: var(--mauve);
+  color: var(--orange);
 }
 
 .projectDesc {

@@ -58,8 +58,8 @@ export const dollyPocket = {
       caption:
         'Silicon Power P34A60 512GB (PCIe Gen 3 ×4) paired with the Pimoroni NVMe Base for Raspberry Pi 5.',
       image: 'dolly-pocket/storage.webp',
-      width: 360,
-      height: 480,
+      width: 480,
+      height: 360,
     },
     {
       title: 'Test fit',

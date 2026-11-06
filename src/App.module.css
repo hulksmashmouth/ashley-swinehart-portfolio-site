@@ -48,15 +48,16 @@
 
 .monogram {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid var(--glass-border);
-  transition: box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px -4px rgba(240, 122, 42, 0.6);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .brand:hover .monogram {
-  box-shadow: 0 0 0 3px rgba(219, 176, 119, 0.25);
+  transform: rotate(-6deg);
+  box-shadow: 0 0 0 3px rgba(233, 185, 58, 0.35);
 }
 
 .wordmark {
@@ -118,14 +119,14 @@
 
 .tagline {
   margin: 0;
-  color: var(--mauve);
+  color: var(--orange);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
 }
 
-.footerStar {
-  color: var(--gold);
+.footerLamp {
+  display: block;
 }
 
 /* mobile menu toggle — hidden on desktop, where the nav is always visible inline */

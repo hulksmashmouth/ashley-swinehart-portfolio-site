@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
-import Cosmos from './components/Cosmos'
-import { Sparkle } from './components/Sparkle'
+import Backdrop from './components/Backdrop'
+import { CubeLamp } from './components/Lamp'
 import styles from './App.module.css'
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -18,17 +18,17 @@ function App() {
 
   return (
     <>
-      <Cosmos />
+      <Backdrop />
       <div className={styles.shell}>
         <header className={styles.header}>
           <div className={styles.headerRow}>
             <NavLink to="/" className={styles.brand}>
               <img
                 className={styles.monogram}
-                src="/brand/monogram.webp"
+                src="/brand/logo-circle.webp"
                 alt=""
-                width={40}
-                height={40}
+                width={44}
+                height={44}
               />
               <span className={styles.wordmark}>Ash Swinehart</span>
             </NavLink>
@@ -80,7 +80,7 @@ function App() {
           <p className={styles.tagline}>
             Thoughtful design. Smarter systems. Better experiences.
           </p>
-          <Sparkle size={12} className={styles.footerStar} />
+          <CubeLamp size={12} className={styles.footerLamp} />
           <span>© {new Date().getFullYear()} Ashley Swinehart, LLC</span>
         </footer>
 
