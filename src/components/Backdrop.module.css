@@ -1,9 +1,45 @@
+/* the den wall: a fixed layer so it stays put while the page scrolls over it, on every
+   device. Sized to the *large* viewport so no strip shows when mobile browser chrome
+   collapses. Layers: Ash's actual knotty-pine paneling, the orange cube lamp's glow, the
+   neon washing pink across the ceiling, and a dimmed center so body copy sitting
+   straight on the wood stays easy to read. */
 .backdrop {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  background:
+    radial-gradient(
+      760px 520px at 8% -4%,
+      rgba(243, 123, 38, 0.34),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 520px at 96% -10%,
+      rgba(255, 98, 184, 0.3),
+      transparent 60%
+    ),
+    radial-gradient(
+      1100px 700px at 50% 120%,
+      rgba(214, 180, 55, 0.16),
+      transparent 60%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(20, 8, 2, 0.35) 0%,
+      rgba(20, 8, 2, 0) 18%,
+      rgba(20, 8, 2, 0.38) 34%,
+      rgba(20, 8, 2, 0.38) 66%,
+      rgba(20, 8, 2, 0) 82%,
+      rgba(20, 8, 2, 0.35) 100%
+    ),
+    url("/brand/pine-paneling.webp") center top / 520px auto repeat,
+    var(--bg);
 }
 
 /* the sign hangs big on the wall at the upper right, reaching past the margin into the
