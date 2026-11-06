@@ -108,7 +108,7 @@
 
 /* links land on #book below the sticky site header instead of under it */
 .bookSection {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 150px;
 }
 
 .bookingIntro {

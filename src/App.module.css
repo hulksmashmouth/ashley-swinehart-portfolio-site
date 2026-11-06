@@ -68,6 +68,31 @@
   white-space: nowrap;
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* booking is the site's main conversion, so it stays one tap away on every page */
+.bookCta {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--bg);
+  background: var(--gradient);
+  box-shadow: var(--glow);
+  transition: filter 0.15s ease;
+}
+
+.bookCta:hover {
+  color: var(--bg);
+  filter: brightness(1.1);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +225,11 @@
 }
 
 @media (max-width: 640px) {
+  .bookCta {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+
   .menuToggle {
     display: flex;
   }
@@ -239,5 +269,12 @@
     height: 100%;
     width: 3px;
     border-radius: 2px;
+  }
+}
+
+/* on narrow phones the round logo carries the brand so the booking button fits */
+@media (max-width: 440px) {
+  .wordmark {
+    display: none;
   }
 }

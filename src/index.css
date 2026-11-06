@@ -57,7 +57,9 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: 100dvh; /* avoids the resize "wobble" as mobile browser chrome shows/hides */
-  overflow-x: hidden;
+  /* clip, not hidden: hidden here would make <body> its own scroll container (html already
+     sets overflow), which stops the sticky header from sticking */
+  overflow-x: clip;
   overscroll-behavior-x: none;
   /* the wall itself (paneling and lighting) is drawn by <Backdrop />, a fixed layer —
      iOS Safari ignores background-attachment: fixed, so a body background would scroll */

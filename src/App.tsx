@@ -38,18 +38,28 @@ function App() {
               />
               <span className={styles.wordmark}>Ash Swinehart</span>
             </NavLink>
-            <button
-              type="button"
-              className={styles.menuToggle}
-              aria-expanded={menuOpen}
-              aria-controls="site-nav"
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              <span className={styles.menuToggleBars} data-open={menuOpen} />
-              <span className={styles.srOnly}>
-                {menuOpen ? 'Close menu' : 'Open menu'}
-              </span>
-            </button>
+            <div className={styles.headerActions}>
+              <NavLink
+                to="/consulting#book"
+                className={styles.bookCta}
+                data-track="cta_click"
+                data-track-label="header_book_call"
+              >
+                Book a call
+              </NavLink>
+              <button
+                type="button"
+                className={styles.menuToggle}
+                aria-expanded={menuOpen}
+                aria-controls="site-nav"
+                onClick={() => setMenuOpen((open) => !open)}
+              >
+                <span className={styles.menuToggleBars} data-open={menuOpen} />
+                <span className={styles.srOnly}>
+                  {menuOpen ? 'Close menu' : 'Open menu'}
+                </span>
+              </button>
+            </div>
           </div>
 
           <nav
