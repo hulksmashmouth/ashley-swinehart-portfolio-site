@@ -57,7 +57,7 @@ export const consulting = {
   ],
   // Cal.com booking link, e.g. 'ash-swinehart/intro-call' — the booking section stays hidden until this is set
   booking: {
-    calLink: 'ash-swinehart-zbcw8d/30min',
+    calLink: 'ash-swinehart/30min',
   },
   contact: {
     label: 'linkedin.com/in/ashleylswinehart',
