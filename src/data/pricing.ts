@@ -144,7 +144,7 @@ export const pricing = {
   provide:
     'Your logo, photos, menu or service list, business hours, and access to your current domain or website if you have one. Content delays can push back the launch date.',
   carePlansNote:
-    'Optional, month to month, no long-term contract. Keep your site online, secure, and up to date without thinking about it.',
+    'Required for sites I host, starting with Essentials. Hosting it yourself? I’ll hand the site over at launch, and a plan is optional. All plans are month to month, with no long-term contract.',
   carePlans: [
     {
       name: 'Essentials',
@@ -181,7 +181,6 @@ export const pricing = {
     },
   ] satisfies Plan[],
   carePlanTerms: [
-    'Sites hosted by me include an Essentials plan or higher. Prefer to host it yourself? I’ll hand it over at launch.',
     'Third-party services like your domain, store platform, booking software, and business email are set up in your name and billed to you directly.',
     'You own your domain name (usually about $20 a year), your content, and your site. Unused hours don’t roll over.',
   ],
