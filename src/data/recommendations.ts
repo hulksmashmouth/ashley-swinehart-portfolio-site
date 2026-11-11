@@ -2,7 +2,7 @@ export type Recommendation = {
   name: string
   /** their LinkedIn headline, shortened to the role, without where they work */
   role: string
-  /** how they worked with Ash, as LinkedIn describes it */
+  /** how they worked with Ash — LinkedIn's wording, except where it didn't fit */
   relationship: string
   date: string
   /** quoted verbatim from LinkedIn, one entry per paragraph */
@@ -98,7 +98,7 @@ export const recommendations: Recommendation[] = [
   {
     name: 'Ciera Blanks',
     role: 'Recruiting Operations',
-    relationship: 'Ash was Ciera’s client',
+    relationship: 'Invited Ash to speak to students about her career, mentor them, and critique their final projects',
     date: 'December 2023',
     text: [
       'I had the pleasure of collaborating with Ashley during a recent webinar where she shared invaluable insights into the ever-evolving landscape of software engineering and tech, as well as her own career journey. She showcased a deep understanding of the subject matter and also engaged our audience of students with a clear, concise, and approachable style that resonated with attendees at various levels of expertise.',
@@ -112,7 +112,7 @@ export const recommendations: Recommendation[] = [
     relationship: 'Ash was senior to Dylan',
     date: 'January 2023',
     text: [
-      'Ashley is a phenomenal front end and UI/UX developer that constantly proves she is skillful at their craft and a value to any team. I met Ashley through another peer at MRI Software and I immediately grew admiration for her as she is skilled in a position I wanted to be in, front end development. Upon learning my interest in front end, Ashley offered me a chance to work with her on one of the multiple teams she was helping. In my experience of working on the same team with Ashley, she has demonstrated vast knowledge on any frontend language, concept, or framework I have seen her utilize. Their experience in delivering the best user experience and designing masterful web pages with tools I have seen her use, such as JavaScript, HTML/CSS, Kendo, and Angular, made her the perfect person to ask any questions related to the task at hand or ask for help on any related problem that proved difficult. Ashley’s expertise was not just shown with their knowledge but their availability as well, since many people from many different teams asked her for assistance. To assure she could help everyone that need it but also make sure that she could make progress on her own task, she scheduled a time slot where you could ask for help or ask any questions. This use of time management allowed her to still have time for their work but also having the ability to assist others. I do not think of Ashley as just a peer but also as a mentor, as she helped me continue to hone my skills in front end development and gave me any advice I may have needed. No matter what path Ashley chooses, she will continue to be valuable to any team, company, or person she works with.',
+      'Ashley is a phenomenal front end and UI/UX developer that constantly proves she is skillful at her craft and a value to any team. I met Ashley through another peer at MRI Software and I immediately grew admiration for her as she is skilled in a position I wanted to be in, front end development. Upon learning my interest in front end, Ashley offered me a chance to work with her on one of the multiple teams she was helping. In my experience of working on the same team with Ashley, she has demonstrated vast knowledge on any frontend language, concept, or framework I have seen her utilize. Her experience in delivering the best user experience and designing masterful web pages with tools I have seen her use, such as JavaScript, HTML/CSS, Kendo, and Angular, made her the perfect person to ask any questions related to the task at hand or ask for help on any related problem that proved difficult. Ashley’s expertise was not just shown with her knowledge but her availability as well, since many people from many different teams asked her for assistance. To assure she could help everyone that need it but also make sure that she could make progress on her own task, she scheduled a time slot where you could ask for help or ask any questions. This use of time management allowed her to still have time for her work but also having the ability to assist others. I do not think of Ashley as just a peer but also as a mentor, as she helped me continue to hone my skills in front end development and gave me any advice I may have needed. No matter what path Ashley chooses, she will continue to be valuable to any team, company, or person she works with.',
     ],
   },
   {

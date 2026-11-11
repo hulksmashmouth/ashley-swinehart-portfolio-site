@@ -60,11 +60,12 @@ function RecommendationCard({ rec, onExpandedChange }: CardProps) {
           </button>
         )}
         <figcaption className={styles.caption}>
-          <span className={styles.name}>{rec.name}</span>
-          <span className={styles.role}>{rec.role}</span>
-          <span className={styles.meta}>
-            {rec.relationship} · {rec.date}
+          <span className={styles.nameRow}>
+            <span className={styles.name}>{rec.name}</span>
+            <span className={styles.meta}>{rec.date}</span>
           </span>
+          <span className={styles.role}>{rec.role}</span>
+          <span className={styles.meta}>{rec.relationship}</span>
         </figcaption>
       </figure>
     </li>
