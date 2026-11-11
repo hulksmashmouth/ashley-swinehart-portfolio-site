@@ -196,6 +196,15 @@
   transform: rotate(180deg);
 }
 
+.jobDescription {
+  margin: 10px 0 0;
+  max-width: 68ch;
+}
+
+.jobDescription + .bullets {
+  margin-top: 8px;
+}
+
 .bullets {
   margin: 10px 0 0;
   padding-left: 18px;

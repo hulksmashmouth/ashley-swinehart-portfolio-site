@@ -5,6 +5,8 @@ export type Job = {
   start: string
   end: string
   location?: string
+  /** optional one-line overview shown above the bullets */
+  description?: string
   bullets: string[]
   /** note rendered between this job and the one above, e.g. a promotion */
   transitionNote?: string
@@ -23,6 +25,22 @@ export const resume = {
   summary:
     'I am a UX engineering leader at the intersection of design systems, front-end architecture, and AI-assisted product development. I scale enterprise experience ecosystems across automotive, real estate, and supply chain SaaS — building design systems, token-driven UI architecture, and dev pipelines integrated with AI workflows, backed by deep React, Angular, and TypeScript expertise and leadership of distributed engineering teams.',
   experience: [
+    {
+      role: 'Founder, UX Strategist and Architect',
+      org: 'Ashley Swinehart, LLC',
+      start: 'Sep 2026',
+      end: 'Present',
+      location: 'Akron, OH (Remote)',
+      description:
+        'Providing UX strategy, front-end development, and software consulting for businesses that need thoughtful, polished digital products.',
+      bullets: [
+        'UX strategy, research, and experience design',
+        'Front-end architecture and development',
+        'Websites, web applications, and custom software',
+        'Design systems and product experience consulting',
+        'Creative and technical leadership from concept through delivery',
+      ],
+    },
     {
       role: 'UX Strategy & Platform Experience Manager',
       org: 'Informativ',

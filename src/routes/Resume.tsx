@@ -68,6 +68,9 @@ function Resume() {
                 </span>
                 <span className={styles.jobChevron} aria-hidden="true" />
               </summary>
+              {job.description && (
+                <p className={styles.jobDescription}>{job.description}</p>
+              )}
               <ul className={styles.bullets}>
                 {job.bullets.map((b) => (
                   <li key={b}>{b}</li>
