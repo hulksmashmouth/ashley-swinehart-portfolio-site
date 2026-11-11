@@ -44,8 +44,6 @@ function Consulting() {
         </ul>
       </section>
 
-      <Recommendations />
-
       {consulting.booking.calLink && (
         <section id="book" className={`${styles.section} ${styles.bookSection}`}>
           <h2 className={styles.sectionTitle}>Book a call</h2>
@@ -58,6 +56,8 @@ function Consulting() {
           </div>
         </section>
       )}
+
+      <Recommendations />
 
       <section className={styles.cta}>
         <h2 className={styles.sectionTitle}>Work together</h2>
