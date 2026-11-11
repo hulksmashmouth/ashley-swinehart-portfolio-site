@@ -80,7 +80,8 @@
   grid-auto-flow: column;
   grid-auto-columns: 86%;
   column-gap: 16px;
-  align-items: start;
+  /* every card stretches to the tallest one, so the row reads as a set of equal cards */
+  align-items: stretch;
   margin: 0;
   padding: 4px 2px 18px;
   list-style: none;
@@ -114,11 +115,13 @@
 }
 
 .card {
+  display: flex;
   scroll-snap-align: start;
   min-width: 0;
 }
 
 .figure {
+  flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -160,6 +163,15 @@
   margin: 0;
 }
 
+/* an expanded quote scrolls inside the card instead of growing it, so cards stay the same size */
+.quote:not(.clamp) {
+  max-height: 13.6em;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(243, 123, 38, 0.5) transparent;
+}
+
 .clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -191,6 +203,8 @@
 }
 
 .caption {
+  /* pinned to the bottom, so names line up across cards whatever the quote length */
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 2px;
