@@ -1,4 +1,5 @@
 import BookingEmbed from '../components/BookingEmbed'
+import Recommendations from '../components/Recommendations'
 import { consulting } from '../data/consulting'
 import styles from './Consulting.module.css'
 
@@ -42,6 +43,8 @@ function Consulting() {
           ))}
         </ul>
       </section>
+
+      <Recommendations />
 
       {consulting.booking.calLink && (
         <section id="book" className={`${styles.section} ${styles.bookSection}`}>

@@ -1,0 +1,216 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 500;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.sub a {
+  color: var(--gold);
+}
+
+.sub a:hover {
+  color: var(--neon);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count {
+  min-width: 7ch;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--fg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.arrow:hover:not(:disabled) {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* a native scroll row: swipes on touch, snaps to each card, and shows a sliver of the
+   next card so it reads as scrollable */
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 86%;
+  column-gap: 16px;
+  align-items: start;
+  margin: 0;
+  padding: 4px 2px 18px;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+@media (min-width: 720px) {
+  .track {
+    grid-auto-columns: calc((100% - 16px) / 2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    scroll-behavior: auto;
+  }
+}
+
+.card {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.figure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 28px 28px 24px;
+  border-radius: 16px;
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 1px 0 var(--glass-highlight) inset,
+    0 14px 30px -14px rgba(0, 0, 0, 0.75);
+}
+
+/* a big neon-pink opening quote mark, like the sign over the couch, sitting inside the card */
+.mark {
+  display: block;
+  height: 30px;
+  margin-bottom: -8px;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 0.9;
+  color: #ff8fcf;
+  text-shadow: var(--neon-glow);
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  overflow: hidden;
+}
+
+/* paragraphs inside a clamped box need to flow as inline lines for the clamp to count them */
+.clamp p + p {
+  margin-top: 10px;
+}
+
+.more {
+  align-self: flex-start;
+  margin-top: -6px;
+  padding: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.more:hover {
+  color: var(--neon);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.role {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}

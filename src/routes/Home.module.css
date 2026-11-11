@@ -151,6 +151,10 @@
 }
 
 
+.recommendations {
+  margin-top: 16px;
+}
+
 .smallBiz {
   display: flex;
   flex-direction: column;

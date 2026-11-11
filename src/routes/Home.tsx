@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { LampDivider } from '../components/Lamp'
+import Recommendations from '../components/Recommendations'
 import { resume } from '../data/resume'
 import styles from './Home.module.css'
 
@@ -85,6 +86,8 @@ function Home() {
           other unnecessarily interesting problem to solve.
         </p>
       </div>
+
+      <Recommendations className={styles.recommendations} />
 
       <aside className={styles.smallBiz} aria-labelledby="small-biz-title">
         <p className={styles.smallBizKicker}>For small businesses</p>
