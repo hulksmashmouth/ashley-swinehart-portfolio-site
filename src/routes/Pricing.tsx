@@ -118,7 +118,9 @@ function Pricing() {
           ))}
         </ul>
         <div className={styles.fine}>
-          <p>{pricing.ownership}</p>
+          {pricing.carePlanTerms.map((t) => (
+            <p key={t}>{t}</p>
+          ))}
         </div>
       </section>
 

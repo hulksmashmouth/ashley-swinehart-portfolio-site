@@ -92,12 +92,16 @@ export const pricing = {
   discounts: [
     {
       label: 'Redesigns',
-      text: 'of an existing site are priced at the matching package. If your current text and photos can be reused, the price drops 15%.',
+      text: 'of an existing site are priced at the matching package, plus the “Moving from an existing site” add-on.',
     },
     { label: 'Nonprofits', text: 'receive 10% off any website package.' },
   ],
   addOns: [
     { name: 'Extra page', price: '$200' },
+    {
+      name: 'Moving from an existing site: content, redirects so you keep your Google rankings, and domain transfer',
+      price: '$150–$300',
+    },
     { name: 'Online store, up to 25 products', price: '$1,200' },
     { name: 'Online booking or scheduling setup', price: '$300' },
     { name: 'Page text written for you, per page', price: '$150' },
@@ -176,8 +180,11 @@ export const pricing = {
       ],
     },
   ] satisfies Plan[],
-  ownership:
+  carePlanTerms: [
+    'Sites hosted by me include an Essentials plan or higher. Prefer to host it yourself? I’ll hand it over at launch.',
+    'Third-party services like your domain, store platform, booking software, and business email are set up in your name and billed to you directly.',
     'You own your domain name (usually about $20 a year), your content, and your site. Unused hours don’t roll over.',
+  ],
   corporate: {
     title: 'Corporate and product teams',
     text: 'Pricing for corporate clients is project-based. UX engineering, design systems, and front-end work are quoted per project after a call about scope, timeline, and deliverables.',

@@ -96,8 +96,8 @@ function Home() {
         </h2>
         <ul className={styles.smallBizList}>
           <li>
-            <strong>Websites</strong> &mdash; WordPress or fully custom, built
-            so you can keep it up to date yourself.
+            <strong>Websites</strong> &mdash; custom-built, fast, and secure,
+            with simple editing so you can keep it up to date yourself.
           </li>
           <li>
             <strong>Online stores</strong> &mdash; a storefront set up and ready

@@ -42,7 +42,7 @@ export const consulting = {
     {
       title: 'Small Business Websites & Online Stores',
       description:
-        'WordPress or fully custom websites for small businesses, plus online storefronts set up and ready to take orders — built to be easy to update after launch.',
+        'Custom-built websites for small businesses — fast, secure, and easy to update yourself — plus online storefronts set up and ready to take orders. WordPress is available if you already run on it.',
     },
     {
       title: 'Photography for Your Site',
