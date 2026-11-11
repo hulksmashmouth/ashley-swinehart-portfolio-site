@@ -9,6 +9,7 @@ import DollyPocketProject from './routes/projects/DollyPocket'
 import DesignSystemStarterProject from './routes/projects/DesignSystemStarter'
 import Resume from './routes/Resume'
 import Consulting from './routes/Consulting'
+import Pricing from './routes/Pricing'
 import NotFound from './routes/NotFound'
 
 export const router = createBrowserRouter([
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
       },
       { path: 'resume', element: <Resume /> },
       { path: 'consulting', element: <Consulting /> },
+      { path: 'pricing', element: <Pricing /> },
       { path: 'about', element: <About /> },
       { path: '*', element: <NotFound /> },
     ],

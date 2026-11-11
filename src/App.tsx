@@ -82,6 +82,9 @@ function App() {
             <NavLink to="/consulting" className={navClass}>
               Consulting
             </NavLink>
+            <NavLink to="/pricing" className={navClass}>
+              Pricing
+            </NavLink>
             <NavLink to="/about" className={navClass}>
               About
             </NavLink>

@@ -115,6 +115,14 @@ function Home() {
             Book a call about your site
           </Link>
           <Link
+            to="/pricing"
+            className={styles.ctaSecondary}
+            data-track="cta_click"
+            data-track-label="small_business_pricing"
+          >
+            See pricing
+          </Link>
+          <Link
             to="/photography"
             className={styles.ctaSecondary}
             data-track="cta_click"
