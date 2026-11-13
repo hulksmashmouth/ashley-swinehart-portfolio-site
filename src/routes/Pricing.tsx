@@ -33,7 +33,7 @@ function Pricing() {
         <p className={styles.intro}>{pricing.intro}</p>
         <div className={styles.ctas}>
           <Link
-            to="/consulting#book"
+            to="/questionnaire"
             className={styles.ctaPrimary}
             data-track="cta_click"
             data-track-label="pricing_book_call_top"
@@ -142,23 +142,15 @@ function Pricing() {
         <h2 className={styles.ctaTitle}>
           Let&rsquo;s build <em className={styles.neonWord}>yours.</em>
         </h2>
-        <p>Reach out for a free 30-minute call and a fixed-price quote.</p>
+        <p>Fill out a short questionnaire, then pick a time for a free 30-minute call and a fixed-price quote.</p>
         <div className={styles.ctas}>
           <Link
-            to="/consulting#book"
+            to="/questionnaire"
             className={styles.ctaPrimary}
             data-track="cta_click"
             data-track-label="pricing_book_call_bottom"
           >
             Book a free call
-          </Link>
-          <Link
-            to="/questionnaire"
-            className={styles.ctaSecondary}
-            data-track="cta_click"
-            data-track-label="pricing_questionnaire"
-          >
-            Fill out the questionnaire
           </Link>
           <a
             className={styles.ctaSecondary}

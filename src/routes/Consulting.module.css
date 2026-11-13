@@ -117,6 +117,24 @@
   color: var(--muted);
 }
 
+.smallBiz {
+  margin: 0;
+  max-width: 60ch;
+  padding: 12px 16px;
+  border-left: 3px solid var(--orange);
+  border-radius: 0 12px 12px 0;
+  background: var(--glass-bg);
+}
+
+.smallBiz a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.smallBiz a:hover {
+  color: var(--neon);
+}
+
 .booking {
   height: 720px;
   border-radius: 16px;

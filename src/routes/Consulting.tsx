@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import BookingEmbed from '../components/BookingEmbed'
 import Recommendations from '../components/Recommendations'
 import { consulting } from '../data/consulting'
@@ -50,6 +51,17 @@ function Consulting() {
           <p className={styles.bookingIntro}>
             Pick a time that works for you. You&rsquo;ll get a calendar invite
             as soon as it&rsquo;s booked.
+          </p>
+          <p className={styles.smallBiz}>
+            Need a website or photos for a small business?{' '}
+            <Link
+              to="/questionnaire"
+              data-track="cta_click"
+              data-track-label="consulting_small_business_questionnaire"
+            >
+              Start with the new client questionnaire
+            </Link>
+            , and you&rsquo;ll pick a time once it&rsquo;s sent.
           </p>
           <div className={styles.booking}>
             <BookingEmbed calLink={consulting.booking.calLink} />

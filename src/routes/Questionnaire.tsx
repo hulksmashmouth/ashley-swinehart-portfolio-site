@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
-import { Link } from 'react-router-dom'
 import { trackEvent } from '../analytics'
+import BookingEmbed from '../components/BookingEmbed'
+import { consulting } from '../data/consulting'
 import { questionnaire, SERVICES, type Question, type Section } from '../data/questionnaire'
 import styles from './Questionnaire.module.css'
 
@@ -216,6 +217,8 @@ function Questionnaire() {
   }
 
   if (status === 'sent') {
+    const calLink = consulting.booking.calLink
+    const business = String(answers.business ?? '').trim()
     return (
       <div className={styles.page}>
         <section className={styles.done}>
@@ -223,8 +226,12 @@ function Questionnaire() {
           <h1 className={styles.title}>
             Thank <em className={styles.neonWord}>you!</em>
           </h1>
-          <p>I&rsquo;m looking forward to learning more about your business. Here&rsquo;s what happens next:</p>
+          <p>
+            I&rsquo;m looking forward to learning more about your business.{' '}
+            {calLink ? 'Last step: pick a time for our free 30-minute call below.' : 'Here’s what happens next:'}
+          </p>
           <ol className={styles.steps}>
+            {calLink && <li>Book your call below. You&rsquo;ll get a calendar invite right away.</li>}
             <li>
               If you have a logo, photos, or examples you mentioned, email them to{' '}
               <a href={`mailto:${questionnaire.email}`}>{questionnaire.email}</a>.
@@ -233,12 +240,28 @@ function Questionnaire() {
               <li key={s}>{s}</li>
             ))}
           </ol>
-          <div className={styles.ctas}>
-            <Link to="/consulting#book" className={styles.ctaPrimary} data-track="cta_click" data-track-label="questionnaire_book_call">
-              Book the call now
-            </Link>
-          </div>
+          {!calLink && (
+            <div className={styles.ctas}>
+              <a className={styles.ctaPrimary} href={`mailto:${questionnaire.email}`}>
+                Email me to set up a call
+              </a>
+            </div>
+          )}
         </section>
+        {calLink && (
+          <section className={styles.bookSection} aria-label="Book your call">
+            <div className={styles.booking}>
+              <BookingEmbed
+                calLink={calLink}
+                prefill={{
+                  name: String(answers.name ?? '').trim(),
+                  email: String(answers.email ?? '').trim(),
+                  notes: business ? `New client questionnaire sent for ${business}.` : undefined,
+                }}
+              />
+            </div>
+          </section>
+        )}
       </div>
     )
   }
@@ -251,6 +274,7 @@ function Questionnaire() {
           New client <em className={styles.neonWord}>questionnaire</em>
         </h1>
         <p className={styles.intro}>{questionnaire.intro}</p>
+        <p className={styles.intro}>{questionnaire.bookingNote}</p>
         <p className={styles.small}>
           Fields marked <span className={styles.req}>*</span> are required. Your answers are saved in
           this browser as you go, so you can come back and finish later.

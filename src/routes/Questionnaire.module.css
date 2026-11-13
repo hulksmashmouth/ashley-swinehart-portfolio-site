@@ -309,7 +309,24 @@ textarea.input {
   font-weight: 700;
 }
 
+.bookSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking {
+  height: 720px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+}
+
 @media (max-width: 600px) {
+  .booking {
+    height: 860px;
+  }
+
   .section,
   .done {
     padding: 20px 16px 22px;

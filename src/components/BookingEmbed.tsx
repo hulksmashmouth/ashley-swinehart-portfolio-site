@@ -5,6 +5,8 @@ import { trackEvent } from '../analytics'
 type BookingEmbedProps = {
   calLink: string
   className?: string
+  /** fills in the booking form, e.g. from the questionnaire someone just sent */
+  prefill?: { name?: string; email?: string; notes?: string }
 }
 
 // Cal.com's own color tokens, mapped onto the den palette. The embed runs in an iframe,
@@ -30,7 +32,7 @@ const denTheme = {
 }
 
 // inline Cal.com scheduler; Cal.com checks and writes to the connected iCloud calendar
-function BookingEmbed({ calLink, className }: BookingEmbedProps) {
+function BookingEmbed({ calLink, className, prefill }: BookingEmbedProps) {
   useEffect(() => {
     getCalApi().then((cal) => {
       cal('ui', {
@@ -55,7 +57,12 @@ function BookingEmbed({ calLink, className }: BookingEmbedProps) {
     <Cal
       className={className}
       calLink={calLink}
-      config={{ theme: 'dark', layout: 'month_view' }}
+      config={{
+        theme: 'dark',
+        layout: 'month_view',
+        // Cal.com rejects empty prefill values, so only pass the ones that are set
+        ...Object.fromEntries(Object.entries(prefill ?? {}).filter(([, v]) => v)),
+      }}
       style={{ width: '100%', height: '100%', overflow: 'auto' }}
     />
   )

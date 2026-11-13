@@ -110,7 +110,7 @@ function Home() {
         </ul>
         <div className={styles.ctas}>
           <Link
-            to="/consulting#book"
+            to="/questionnaire"
             className={styles.ctaPrimary}
             data-track="cta_click"
             data-track-label="small_business_book_call"

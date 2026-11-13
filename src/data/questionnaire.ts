@@ -36,8 +36,10 @@ export const questionnaire = {
   email: 'ash.swinehart.dev@gmail.com',
   intro:
     "Thanks for reaching out! This questionnaire helps me understand your business, your goals, and what you need from a website and/or photography. Answer what you can; if you're unsure about something, just write “not sure” and we'll figure it out together on our call. It takes about 15 to 20 minutes.",
+  bookingNote:
+    "Once you send it, you'll pick a time for a free 30-minute call to talk through your goals.",
   nextSteps: [
-    "I'll review your answers and we'll schedule a free 30-minute call to talk through your goals.",
+    "I'll review your answers before our call.",
     "Within a few days of our call, you'll receive a proposal with scope, timeline, and pricing.",
   ],
   sections: [
