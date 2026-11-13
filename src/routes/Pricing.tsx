@@ -152,6 +152,14 @@ function Pricing() {
           >
             Book a free call
           </Link>
+          <Link
+            to="/questionnaire"
+            className={styles.ctaSecondary}
+            data-track="cta_click"
+            data-track-label="pricing_questionnaire"
+          >
+            Fill out the questionnaire
+          </Link>
           <a
             className={styles.ctaSecondary}
             href={`mailto:${pricing.email}`}
