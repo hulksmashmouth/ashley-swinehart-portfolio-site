@@ -14,31 +14,31 @@ export type Job = {
 
 export const resume = {
   name: 'Ash Swinehart',
-  title: 'UX Engineering Leader',
+  title: 'Engineering Leader',
   pdf: 'ash-swinehart-resume.pdf',
   links: [
+    {
+      label: 'ash.swinehart.dev@gmail.com',
+      href: 'mailto:ash.swinehart.dev@gmail.com',
+    },
     {
       label: 'linkedin.com/in/ashleylswinehart',
       href: 'https://www.linkedin.com/in/ashleylswinehart',
     },
   ],
   summary:
-    'I am a UX engineering leader at the intersection of design systems, front-end architecture, and AI-assisted product development. I scale enterprise experience ecosystems across automotive, real estate, and supply chain SaaS — building design systems, token-driven UI architecture, and dev pipelines integrated with AI workflows, backed by deep React, Angular, and TypeScript expertise and leadership of distributed engineering teams.',
+    'Engineering Manager with 13+ years in software engineering and 3+ years leading full-stack teams of up to 12 engineers. A hands-on player-coach who owns delivery, sets technical direction across the stack, and raises code quality through standards, reviews, and mentorship. Unified a team split across two contracting firms, took on a second team mid-transition, and shipped code used by hundreds of thousands of users. Certified ScrumMaster with an M.S. in UX Design.',
   experience: [
     {
-      role: 'Founder, UX Strategist and Architect',
+      role: 'Founder & Principal Consultant',
       org: 'Ashley Swinehart, LLC',
       start: 'Sep 2026',
       end: 'Present',
-      location: 'Akron, OH (Remote)',
-      description:
-        'Providing UX strategy, front-end development, and software consulting for businesses that need thoughtful, polished digital products.',
+      location: 'Akron, OH',
       bullets: [
-        'UX strategy, research, and experience design',
-        'Front-end architecture and development',
-        'Websites, web applications, and custom software',
-        'Design systems and product experience consulting',
-        'Creative and technical leadership from concept through delivery',
+        'Lead client engagements end to end, from discovery and scoping through design, build, and launch.',
+        'Design and build custom websites and web applications, owning architecture, UX, and deployment.',
+        'Provide design system assessments and technical/UX reviews, using AI-assisted design-to-code workflows (Figma MCP, Claude Code) to shorten delivery.',
       ],
     },
     {
@@ -48,21 +48,22 @@ export const resume = {
       end: 'Jul 2026',
       location: 'Frisco, TX',
       bullets: [
-        "Owned UX vision and platform experience across Informativ's product portfolio, unifying multiple auto fintech products into one cohesive platform.",
-        'Established the design system as core product infrastructure, driving consistency, speed, and quality across teams.',
-        'Found a logic issue in the AI assistant before release to production that would have caused audit issues down the road.',
+        'Owned UX strategy for a company formed from three merged organizations, working to unify 5 auto fintech products into one platform.',
+        'Established the design system as core product infrastructure and built an AI-assisted Figma-to-code workflow with Claude Code and Figma MCP.',
+        'Caught a data-integrity flaw in an AI chatbot design and redesigned it per field, protecting the compliance audit trail.',
       ],
     },
     {
-      role: 'NextGen UX Engineering Manager, Platform',
+      role: 'Engineering Manager, NextGen UX - Platform',
       org: 'TransImpact',
       start: 'Mar 2025',
       end: 'Jan 2026',
       location: 'Independence, OH',
       bullets: [
-        'Ran stand-ups, sprint planning, and releases for a global team.',
-        'Led a distributed team of 12 developers building a cross-product design system with StencilJS and custom web components compatible with React and Angular.',
-        'Maintained Angular front-end and NestJS middleware repos, bridging a modern component UI to a legacy .NET backend.',
+        'Led a 12-developer full-stack team (Angular, NestJS, StencilJS) modernizing the product on top of legacy .NET services with no backend rewrite.',
+        'Unified a team staffed from two rival contracting firms into one respectful, productive squad.',
+        'Expanded scope to lead the GenAI team after the VP of Engineering left, keeping both teams delivering.',
+        'Architected the API service layer as a standalone package so a planned GraphQL migration would not require front-end rework.',
       ],
       transitionNote: 'Promoted from Software Development Manager',
     },
@@ -72,9 +73,9 @@ export const resume = {
       start: 'Apr 2024',
       end: 'Mar 2025',
       bullets: [
-        'Drove a major UI overhaul grounded in accessibility and usability.',
-        'Led a team of 7 developers on the Demand Planning squad (Spotify model), improving forecasting UI accuracy and usability.',
-        'Mentored engineers on Angular, web components, and TypeScript best practices.',
+        'Player-coach for a 7-developer full-stack squad in Demand Planning (Spotify model), delivering features end to end.',
+        'Delivered an interactive Power BI dashboard adopted by 4 teams, and led an accessibility-focused UI overhaul.',
+        'Improved velocity through detailed estimates and subtask breakdowns, and raised code quality through reviews and coaching.',
       ],
     },
     {
@@ -100,7 +101,7 @@ export const resume = {
         'Created high-fidelity mockups and prototypes (Adobe XD, Balsamiq) and led modernization of legacy interfaces.',
       ],
     },
-  ] satisfies Job[],
+  ] satisfies Job[] as Job[],
   personalProject: {
     name: 'Dolly Pocket',
     description:
@@ -114,7 +115,7 @@ export const resume = {
     },
   ],
   certifications: [
-    'Scrum Master Certified (SMC) — valid through Apr 2027',
+    'Certified ScrumMaster (CSM) — valid through Apr 2027',
     'Microsoft Certified: Azure AI Fundamentals',
     'Microsoft Certified: Azure Fundamentals',
   ],
