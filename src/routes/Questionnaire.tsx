@@ -211,7 +211,9 @@ function Questionnaire() {
         // nothing to clean up
       }
       window.scrollTo({ top: 0, behavior: 'smooth' })
-    } catch {
+    } catch (err) {
+      // surface FormSubmit's reason (e.g. "This form needs Activation") for debugging
+      console.error('Questionnaire submission failed:', err)
       setStatus('error')
     }
   }
